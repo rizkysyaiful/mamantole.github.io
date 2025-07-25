@@ -9,7 +9,8 @@ logo:
   desktop: "images/logo/logo.svg"
   desktop_height: "32px"
   footer: "images/logo/logo-footer.svg"
-  footer_height:
+  footer_height: "32px"
+
 collections:
   myths:
     output: true
