@@ -3,6 +3,10 @@
   padding: 48px;
   background-color: $navy-dark;
 
+  @include media-breakpoint-up(sm) {
+    padding: 24px;
+  }
+
   h2 {
     color: $white;
     font-size: 32px;
