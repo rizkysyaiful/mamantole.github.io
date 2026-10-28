@@ -1,15 +1,35 @@
 main:
-  - name: "Individual Treasury"
-    url: "/individual-treasury/"
+  - name: About
+    url: /about/
     weight: 1
-  - name: "Can BTC Replace USD?"
-    url: "/myths/"
+  - name: Services
+    url: /services/
     weight: 2
-
+  - name: Thoughts
+    weight: 3
+    children:
+      - name: 1. Myth Busting
+        url: /myths/
+      - name: 2. Guides
+        url: /guides/
+      - name: 3. News
+        url: /blog/
+  - name: Team
+    url: /team/
+    weight: 4
+  - name: Contact
+    url: /contact/
+    weight: 5
 footer:
-  - name: "Individual Treasury"
-    url: "/individual-treasury/"
+  - name: Guides
+    url: /guides/
     weight: 1
-  - name: "Can BTC Replace USD?"
-    url: "/myths/"
+  - name: Myth Busting
+    url: /myths/
     weight: 2
+  - name: News
+    url: /blog/
+    weight: 3
+  - name: Contact
+    url: /contact/
+    weight: 4

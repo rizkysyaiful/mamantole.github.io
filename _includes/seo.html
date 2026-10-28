@@ -1,0 +1,258 @@
+{%- comment -%}
+  SEO + GEO head tags. Per-page overrides (front matter):
+    seo_title        full <title> text, used as-is
+    meta_description overrides description for search/social snippets
+    image            share image (PNG/JPG, 1200x630 recommended)
+    noindex: true    keep the page out of search and the sitemap
+    last_modified_at ISO date the content was last reviewed
+{%- endcomment -%}
+{%- assign org = site.organization -%}
+{%- assign home_url = '/' | absolute_url -%}
+{%- assign org_id = home_url | append: '#organization' -%}
+{%- assign website_id = home_url | append: '#website' -%}
+{%- assign canonical = page.url | replace: 'index.html', '' | absolute_url -%}
+
+{%- if page.seo_title -%}
+  {%- assign seo_title = page.seo_title -%}
+{%- elsif page.title and page.jobtitle -%}
+  {%- capture seo_title -%}{{ page.title }} – {{ page.jobtitle }} | {{ site.title }}{%- endcapture -%}
+{%- elsif page.title -%}
+  {%- capture seo_title -%}{{ page.title }} | {{ site.title }}{%- endcapture -%}
+{%- else -%}
+  {%- capture seo_title -%}{{ site.title }} | {{ site.tagline }}{%- endcapture -%}
+{%- endif -%}
+{%- assign share_title = page.meta_title | default: page.title | default: site.title -%}
+
+{%- assign seo_description = page.meta_description | default: page.description | default: page.summary -%}
+{%- unless seo_description -%}
+  {%- if page.excerpt -%}{%- assign seo_description = page.excerpt | strip_html | normalize_whitespace | truncate: 160 -%}{%- endif -%}
+{%- endunless -%}
+{%- assign seo_description = seo_description | default: site.description | strip_html | normalize_whitespace -%}
+
+{%- assign share_image = page.image | default: site.image -%}
+{%- assign share_ext = share_image | split: '.' | last | downcase -%}
+{%- if share_ext == 'svg' -%}{%- assign share_image = site.image -%}{%- endif -%}
+{%- assign share_image = share_image | absolute_url -%}
+
+{%- comment -%} Only posts carry meaningful dates; collection docs keep theme placeholder dates. {%- endcomment -%}
+{%- if page.layout == 'post' -%}{%- assign published = page.date | date_to_xmlschema -%}{%- endif -%}
+{%- assign modified = page.last_modified_at -%}
+{%- if page.layout == 'post' -%}{%- assign modified = modified | default: page.date -%}{%- endif -%}
+{%- if modified -%}{%- assign modified = modified | date_to_xmlschema -%}{%- endif -%}
+{%- if page.layout == 'post' -%}{%- assign og_type = 'article' -%}{%- elsif page.collection == 'team' -%}{%- assign og_type = 'profile' -%}{%- else -%}{%- assign og_type = 'website' -%}{%- endif -%}
+<title>{{ seo_title | escape }}</title>
+<meta name="description" content="{{ seo_description | escape }}">
+<link rel="canonical" href="{{ canonical }}">
+{%- if page.noindex %}
+<meta name="robots" content="noindex, follow">
+{%- else %}
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+{%- endif %}
+<meta name="author" content="{{ site.title }}">
+<meta name="theme-color" content="#172B4D">
+<link rel="alternate" type="application/atom+xml" title="{{ site.title }} blog" href="{{ '/feed.xml' | relative_url }}">
+<link rel="sitemap" type="application/xml" href="{{ '/sitemap.xml' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ org.logo | relative_url }}">
+
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:locale" content="{{ site.locale }}">
+<meta property="og:type" content="{{ og_type }}">
+<meta property="og:title" content="{{ share_title | escape }}">
+<meta property="og:description" content="{{ seo_description | escape }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ share_image }}">
+<meta property="og:image:alt" content="{{ site.title }} – {{ site.tagline | escape }}">
+{%- if share_image contains 'og-image.png' %}
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+{%- endif %}
+{%- if og_type == 'article' %}
+<meta property="article:published_time" content="{{ published }}">
+<meta property="article:modified_time" content="{{ modified }}">
+{%- if page.category %}<meta property="article:section" content="{{ page.category | escape }}">{% endif %}
+{%- endif %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ share_title | escape }}">
+<meta name="twitter:description" content="{{ seo_description | escape }}">
+<meta name="twitter:image" content="{{ share_image }}">
+{%- if site.data.seo.meta_twitter_site != empty and site.data.seo.meta_twitter_site %}
+<meta name="twitter:site" content="{{ site.data.seo.meta_twitter_site }}">
+{%- endif %}
+{%- if site.data.seo.meta_twitter_creator != empty and site.data.seo.meta_twitter_creator %}
+<meta name="twitter:creator" content="{{ site.data.seo.meta_twitter_creator }}">
+{%- endif %}
+{%- if site.data.seo.google_site_verification and site.data.seo.google_site_verification != '' %}
+<meta name="google-site-verification" content="{{ site.data.seo.google_site_verification }}">
+{%- endif %}
+{%- if site.data.seo.bing_site_verification and site.data.seo.bing_site_verification != '' %}
+<meta name="msvalidate.01" content="{{ site.data.seo.bing_site_verification }}">
+{%- endif %}
+
+{%- comment -%} ---------- Structured data (schema.org JSON-LD) ---------- {%- endcomment -%}
+{%- assign team_members = site.team | sort: 'weight' -%}
+{%- if page.url == '/' -%}{%- assign page_type = 'WebPage' -%}
+{%- elsif page.layout == 'contact' -%}{%- assign page_type = 'ContactPage' -%}
+{%- elsif page.url == '/about/' -%}{%- assign page_type = 'AboutPage' -%}
+{%- elsif page.collection == 'team' -%}{%- assign page_type = 'ProfilePage' -%}
+{%- elsif page.layout == 'myths' -%}{%- assign page_type = 'FAQPage' -%}
+{%- elsif page.layout == 'blog' or page.layout == 'services' or page.layout == 'teams' or page.layout == 'guides' -%}{%- assign page_type = 'CollectionPage' -%}
+{%- else -%}{%- assign page_type = 'WebPage' -%}{%- endif -%}
+
+{%- if page.collection == 'services' -%}{%- assign crumb_name = 'Services' -%}{%- assign crumb_url = '/services/' -%}
+{%- elsif page.collection == 'team' -%}{%- assign crumb_name = 'Team' -%}{%- assign crumb_url = '/team/' -%}
+{%- elsif page.collection == 'guides' -%}{%- assign crumb_name = 'Guides' -%}{%- assign crumb_url = '/guides/' -%}
+{%- elsif page.collection == 'myths' -%}{%- assign crumb_name = 'Myth Busting' -%}{%- assign crumb_url = '/myths/' -%}
+{%- elsif page.collection == 'posts' -%}{%- assign crumb_name = 'News' -%}{%- assign crumb_url = '/blog/' -%}
+{%- else -%}{%- assign crumb_name = nil -%}{%- endif -%}
+{%- assign crumb_label = page.breadcrumb | default: page.title | default: site.title -%}
+{%- for item in site.data.menus.main -%}{%- if item.url == page.url -%}{%- assign crumb_label = item.name -%}{%- endif -%}{%- for child in item.children -%}{%- if child.url == page.url -%}{%- assign crumb_label = child.name | remove_first: '1. ' | remove_first: '2. ' | remove_first: '3. ' -%}{%- endif -%}{%- endfor -%}{%- endfor -%}
+{%- for item in site.data.menus.footer -%}{%- if item.url == page.url -%}{%- assign crumb_label = item.name -%}{%- endif -%}{%- endfor -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": {{ org.type | default: 'Organization' | jsonify }},
+      "@id": {{ org_id | jsonify }},
+      "name": {{ org.name | default: site.title | jsonify }},
+      "url": {{ home_url | jsonify }},
+      "slogan": {{ site.tagline | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "logo": { "@type": "ImageObject", "url": {{ org.logo | absolute_url | jsonify }}, "width": 512, "height": 512 },
+      "image": {{ site.image | absolute_url | jsonify }},
+      "areaServed": [{% for country in org.area_served %}{ "@type": "Country", "name": {{ country | jsonify }} }{% unless forloop.last %}, {% endunless %}{% endfor %}],
+      "knowsAbout": {{ org.knows_about | jsonify }},
+      {%- if site.data.contact.email != empty and site.data.contact.email %}
+      "email": {{ site.data.contact.email | jsonify }},
+      {%- endif %}
+      {%- if site.data.contact.phone != empty and site.data.contact.phone %}
+      "telephone": {{ site.data.contact.phone | jsonify }},
+      {%- endif %}
+      {%- if site.data.social.size > 0 %}
+      "sameAs": [{% for s in site.data.social %}{{ s.link | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %}],
+      {%- endif %}
+      "employee": [{% for member in team_members %}{ "@id": {{ member.url | absolute_url | append: '#person' | jsonify }} }{% unless forloop.last %}, {% endunless %}{% endfor %}],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Bitcoin treasury services",
+        "itemListElement": [{% for service in site.services %}{ "@type": "Offer", "itemOffered": { "@id": {{ service.url | absolute_url | append: '#service' | jsonify }} } }{% unless forloop.last %}, {% endunless %}{% endfor %}]
+      }
+    },
+    {% for service in site.services -%}
+    {
+      "@type": "Service",
+      "@id": {{ service.url | absolute_url | append: '#service' | jsonify }},
+      "name": {{ service.title | jsonify }},
+      "serviceType": {{ service.title | jsonify }},
+      "description": {{ service.description | default: service.summary | jsonify }},
+      "url": {{ service.url | absolute_url | jsonify }},
+      "provider": { "@id": {{ org_id | jsonify }} },
+      "areaServed": [{% for country in org.area_served %}{ "@type": "Country", "name": {{ country | jsonify }} }{% unless forloop.last %}, {% endunless %}{% endfor %}]
+    },
+    {% endfor -%}
+    {% for member in team_members -%}
+    {
+      "@type": "Person",
+      "@id": {{ member.url | absolute_url | append: '#person' | jsonify }},
+      "name": {{ member.title | jsonify }},
+      "jobTitle": {{ member.jobtitle | jsonify }},
+      "description": {{ member.excerpt | strip_html | normalize_whitespace | truncate: 300 | jsonify }},
+      "url": {{ member.url | absolute_url | jsonify }},
+      "image": {{ member.image | absolute_url | jsonify }},
+      "worksFor": { "@id": {{ org_id | jsonify }} },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {% endfor -%}
+    {
+      "@type": "WebSite",
+      "@id": {{ website_id | jsonify }},
+      "url": {{ home_url | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "inLanguage": {{ site.lang | jsonify }},
+      "publisher": { "@id": {{ org_id | jsonify }} }
+    },
+    {
+      "@type": {{ page_type | jsonify }},
+      "@id": {{ canonical | append: '#webpage' | jsonify }},
+      "url": {{ canonical | jsonify }},
+      "name": {{ seo_title | jsonify }},
+      "description": {{ seo_description | jsonify }},
+      "inLanguage": {{ site.lang | jsonify }},
+      "isPartOf": { "@id": {{ website_id | jsonify }} },
+      "about": { "@id": {{ org_id | jsonify }} },
+      "primaryImageOfPage": { "@type": "ImageObject", "url": {{ share_image | jsonify }} },
+      {%- if modified %}
+      "dateModified": {{ modified | jsonify }},
+      {%- endif %}
+      {%- if page.collection == 'team' %}
+      "mainEntity": { "@id": {{ canonical | append: '#person' | jsonify }} },
+      {%- elsif page.collection == 'services' %}
+      "mainEntity": { "@id": {{ canonical | append: '#service' | jsonify }} },
+      {%- elsif page.layout == 'myths' %}
+      "mainEntity": [{% for myth in site.myths %}{
+        "@type": "Question",
+        "name": {{ myth.title | jsonify }},
+        "url": {{ myth.url | absolute_url | jsonify }},
+        "acceptedAnswer": { "@type": "Answer", "text": {{ myth.description | default: myth.excerpt | strip_html | normalize_whitespace | jsonify }} }
+      }{% unless forloop.last %}, {% endunless %}{% endfor %}],
+      {%- endif %}
+      "breadcrumb": { "@id": {{ canonical | append: '#breadcrumb' | jsonify }} }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": {{ canonical | append: '#breadcrumb' | jsonify }},
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": {{ home_url | jsonify }} }
+        {%- if page.url != '/' -%}
+        {%- if crumb_name -%},
+        { "@type": "ListItem", "position": 2, "name": {{ crumb_name | jsonify }}, "item": {{ crumb_url | absolute_url | jsonify }} },
+        { "@type": "ListItem", "position": 3, "name": {{ crumb_label | jsonify }}, "item": {{ canonical | jsonify }} }
+        {%- else -%},
+        { "@type": "ListItem", "position": 2, "name": {{ crumb_label | jsonify }}, "item": {{ canonical | jsonify }} }
+        {%- endif -%}
+        {%- endif %}
+      ]
+    }
+    {%- if page.layout == 'post' -%},
+    {
+      "@type": "BlogPosting",
+      "@id": {{ canonical | append: '#article' | jsonify }},
+      "headline": {{ page.title | jsonify }},
+      "description": {{ seo_description | jsonify }},
+      "url": {{ canonical | jsonify }},
+      "mainEntityOfPage": { "@id": {{ canonical | append: '#webpage' | jsonify }} },
+      "image": {{ share_image | jsonify }},
+      "datePublished": {{ published | jsonify }},
+      "dateModified": {{ modified | jsonify }},
+      {%- if page.category %}
+      "articleSection": {{ page.category | jsonify }},
+      {%- endif %}
+      "wordCount": {{ page.content | strip_html | number_of_words }},
+      "inLanguage": {{ site.lang | jsonify }},
+      {%- assign post_author = site.team | where: 'slug', page.author | first %}
+      "author": { "@id": {% if post_author %}{{ post_author.url | absolute_url | append: '#person' | jsonify }}{% else %}{{ org_id | jsonify }}{% endif %} },
+      "publisher": { "@id": {{ org_id | jsonify }} }
+    }
+    {%- endif %}
+    {%- if page.collection == 'myths' or page.collection == 'guides' -%}
+    {%- assign doc_author = site.team | where: 'slug', page.author | first -%},
+    {
+      "@type": "Article",
+      "@id": {{ canonical | append: '#article' | jsonify }},
+      "headline": {{ page.title | jsonify }},
+      "description": {{ seo_description | jsonify }},
+      "url": {{ canonical | jsonify }},
+      "mainEntityOfPage": { "@id": {{ canonical | append: '#webpage' | jsonify }} },
+      {%- if page.last_modified_at %}
+      "dateModified": {{ page.last_modified_at | date_to_xmlschema | jsonify }},
+      {%- endif %}
+      "wordCount": {{ page.content | strip_html | number_of_words }},
+      "inLanguage": {{ site.lang | jsonify }},
+      "author": { "@id": {% if doc_author %}{{ doc_author.url | absolute_url | append: '#person' | jsonify }}{% else %}{{ org_id | jsonify }}{% endif %} },
+      "publisher": { "@id": {{ org_id | jsonify }} }
+    }
+    {%- endif %}
+  ]
+}
+</script>

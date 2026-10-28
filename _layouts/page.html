@@ -1,15 +1,8 @@
 ---
 layout: default
-bodyClass: "page-basic"
+bodyClass: page-basic
 ---
-
-<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
-    <div class="row justify-content-start">
-        <div class="col-12 col-md-8">
-            <div class="service service-single">
-                <h1 class="title">{{page.title}}</h1>
-                <div class="content">{{content}}</div>
-            </div>
-        </div>
-    </div>
-</div>
+<header class="page-heading container"><span class="eyebrow">{{ page.eyebrow | default: 'Bahtera' }}</span><h1>{{ page.title }}</h1>{% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}</header>
+<div class="container reading-layout"><article class="content prose">{{ content }}</article><aside class="side-note"><span class="eyebrow">Our focus</span><h2>Education. Structure. Confidence.</h2><p>Thoughtful support for leaders exploring Bitcoin treasury.</p><a href="{{ '/services/' | relative_url }}">Explore our services &rarr;</a></aside></div>
+{% if page.show_regional_map %}{% include regional-map.html %}{% endif %}
+{% include section-cta.html %}

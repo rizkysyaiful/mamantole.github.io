@@ -1,0 +1,3 @@
+{%- assign byline_author = site.team | where: 'slug', include.author | first -%}
+{%- assign byline_reviewer = site.team | where: 'slug', include.reviewer | first -%}
+<p class="post-meta author-line">{% if byline_author %}By <a href="{{ byline_author.url | relative_url }}">{{ byline_author.title }}</a>{% if byline_author.group == 'partner' %} ({{ byline_author.country }} partner){% endif %}{% else %}Bahtera{% endif %}{% if byline_reviewer %} &middot; Reviewed by <a href="{{ byline_reviewer.url | relative_url }}">{{ byline_reviewer.title }}</a>{% endif %}{% if include.updated %} &middot; Updated <time datetime="{{ include.updated | date_to_xmlschema }}">{{ include.updated | date: '%B %-d, %Y' }}</time>{% endif %}</p>

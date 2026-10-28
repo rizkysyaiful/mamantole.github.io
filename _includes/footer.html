@@ -4,7 +4,9 @@
       <div class="col-12">
         <div class="footer-inner">
           <div class="logo-footer">
-            <a href="{{ site.baseurl }}"><img height="{{ site.logo.footer_height }}" alt="{{ site.title }}" src="{{ site.logo.footer | relative_url }}" /></a>
+            <a href="{{ '/' | relative_url }}"><img height="{{ site.logo.footer_height }}" alt="{{ site.title }}" src="{{ site.logo.footer | relative_url }}?v=5" /></a>
+            <p class="brand-tagline">{{ site.tagline }}</p>
+            <p class="brand-regions">Indonesia &middot; Malaysia &middot; Singapore &middot; India &middot; Philippines</p>
           </div>
           <ul>
             {% assign footermenu = site.data.menus.footer | sort: 'weight'  %}

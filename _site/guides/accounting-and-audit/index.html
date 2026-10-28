@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accounting and audit for Bitcoin holdings | Bahtera</title>
+<meta name="description" content="What your auditor will ask and what evidence to prepare: control, existence, valuation, accounting treatment and disclosure. A practical guide that leaves conclusions to your auditor.">
+<link rel="canonical" href="https://rizkysyaiful.github.io/guides/accounting-and-audit/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="Bahtera">
+<meta name="theme-color" content="#172B4D">
+<link rel="alternate" type="application/atom+xml" title="Bahtera blog" href="/feed.xml">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="apple-touch-icon" href="/images/logo/logo-square.png">
+
+<meta property="og:site_name" content="Bahtera">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Accounting and audit for Bitcoin holdings">
+<meta property="og:description" content="What your auditor will ask and what evidence to prepare: control, existence, valuation, accounting treatment and disclosure. A practical guide that leaves conclusions to your auditor.">
+<meta property="og:url" content="https://rizkysyaiful.github.io/guides/accounting-and-audit/">
+<meta property="og:image" content="https://rizkysyaiful.github.io/images/og-image.png">
+<meta property="og:image:alt" content="Bahtera – Institution-Level Bitcoin Consultancy.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Accounting and audit for Bitcoin holdings">
+<meta name="twitter:description" content="What your auditor will ask and what evidence to prepare: control, existence, valuation, accounting treatment and disclosure. A practical guide that leaves conclusions to your auditor.">
+<meta name="twitter:image" content="https://rizkysyaiful.github.io/images/og-image.png"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://rizkysyaiful.github.io/#organization",
+      "name": "Bahtera",
+      "url": "https://rizkysyaiful.github.io/",
+      "slogan": "Institution-Level Bitcoin Consultancy.",
+      "description": "Bahtera is a Bitcoin treasury consultancy for companies and leaders across Asia, including Indonesia, Malaysia, Singapore, India and the Philippines, offering executive education, treasury policy, custody architecture, tax coordination and audit-ready reporting.",
+      "logo": { "@type": "ImageObject", "url": "https://rizkysyaiful.github.io/images/logo/logo-square.png", "width": 512, "height": 512 },
+      "image": "https://rizkysyaiful.github.io/images/og-image.png",
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }],
+      "knowsAbout": ["Bitcoin","Bitcoin treasury","Corporate treasury management","Treasury policy design","Bitcoin custody (multisig and cold storage)","Bitcoin accounting and audit","Executive Bitcoin education"],
+      "employee": [{ "@id": "https://rizkysyaiful.github.io/team/ricky/#person" }, { "@id": "https://rizkysyaiful.github.io/team/faizal/#person" }, { "@id": "https://rizkysyaiful.github.io/team/banitama/#person" }, { "@id": "https://rizkysyaiful.github.io/team/dimas/#person" }, { "@id": "https://rizkysyaiful.github.io/team/arjun-mehta/#person" }, { "@id": "https://rizkysyaiful.github.io/team/maria-santos/#person" }, { "@id": "https://rizkysyaiful.github.io/team/lim-wei-jie/#person" }, { "@id": "https://rizkysyaiful.github.io/team/tan-mei-ling/#person" }],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Bitcoin treasury services",
+        "itemListElement": [{ "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/policy_design/#service" } }, { "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/custody_architecture/#service" } }, { "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/accounting_audit/#service" } }, { "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/regulatory_guidance/#service" } }]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/policy_design/#service",
+      "name": "Treasury Policy Design",
+      "serviceType": "Treasury Policy Design",
+      "description": "A documented framework for treasury decisions, responsibilities, and internal review.",
+      "url": "https://rizkysyaiful.github.io/services/policy_design/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/custody_architecture/#service",
+      "name": "Custody Architecture",
+      "serviceType": "Custody Architecture",
+      "description": "Custody planning that connects technical design with everyday responsibilities.",
+      "url": "https://rizkysyaiful.github.io/services/custody_architecture/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/accounting_audit/#service",
+      "name": "Accounting & Audit Support",
+      "serviceType": "Accounting & Audit Support",
+      "description": "Operational records and reporting workflows designed for review with your finance team.",
+      "url": "https://rizkysyaiful.github.io/services/accounting_audit/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/regulatory_guidance/#service",
+      "name": "Regulatory & Tax Guidance",
+      "serviceType": "Regulatory & Tax Guidance",
+      "description": "A structured way to identify questions and coordinate with your legal and tax advisers.",
+      "url": "https://rizkysyaiful.github.io/services/regulatory_guidance/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/ricky/#person",
+      "name": "Ricky Saif",
+      "jobTitle": "Corporate education",
+      "description": "Ricky Saif has educated corporations since 2013, focusing today on exposing The Fiat Flood crisis – where inflation silently drains cash reserves while traditional assets fail. Ricky empowers pragmatic leaders to adopt Bitcoin treasuries as an inflation-proof solution. He works exclusively with e...",
+      "url": "https://rizkysyaiful.github.io/team/ricky/",
+      "image": "https://rizkysyaiful.github.io/images/team/ricky.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/faizal/#person",
+      "name": "Faizal Abdillah",
+      "jobTitle": "Banking background",
+      "description": "Faizal Abdillah professional journey began in the banking sector, where he gained firsthand insight into traditional finance. The discovery of Bitcoin—a technology with the potential to render banks obsolete—sparked a deep curiosity. As he delved further, he came to believe that many societal iss...",
+      "url": "https://rizkysyaiful.github.io/team/faizal/",
+      "image": "https://rizkysyaiful.github.io/images/team/faizal.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/banitama/#person",
+      "name": "Banitama",
+      "jobTitle": "Software development",
+      "description": "Banitama is a software developer and Bitcoin advocate who began using BTC in 2014—initially unaware of its revolutionary potential until discovering The Bitcoin Standard in 2018, which unlocked his deep dive into monetary history and economics. Now based in Sweden (home of the world’s first centr...",
+      "url": "https://rizkysyaiful.github.io/team/banitama/",
+      "image": "https://rizkysyaiful.github.io/images/team/banitama.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/dimas/#person",
+      "name": "Dimas",
+      "jobTitle": "Regional partner, Indonesia",
+      "description": "Dimas is Bahtera’s partner in Indonesia. He is a co-founder of Bitcoin Indonesia and of Bitcoin House Bali, and hosts the Bitcoin Indonesia Podcast. Based in Bandung, he is a long-time Bitcoin educator and community builder. With Bahtera he brings executive education and treasury policy discussio...",
+      "url": "https://rizkysyaiful.github.io/team/dimas/",
+      "image": "https://rizkysyaiful.github.io/images/team/dimas.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/arjun-mehta/#person",
+      "name": "Arjun Mehta",
+      "jobTitle": "Regional partner, India",
+      "description": "Arjun Mehta is a placeholder profile for Bahtera’s regional partner in India. He will support Indian companies and family offices with executive education, treasury policy discussions and coordination with local tax and accounting advisers. This page is a dummy profile and will be replaced with t...",
+      "url": "https://rizkysyaiful.github.io/team/arjun-mehta/",
+      "image": "https://rizkysyaiful.github.io/images/team/arjun-mehta.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/maria-santos/#person",
+      "name": "Maria Santos",
+      "jobTitle": "Regional partner, Philippines",
+      "description": "Maria Santos is a placeholder profile for Bahtera’s regional partner in the Philippines. She will help Filipino businesses and leaders explore Bitcoin treasury through executive education and practical, locally-aware implementation support. This page is a dummy profile and will be replaced with t...",
+      "url": "https://rizkysyaiful.github.io/team/maria-santos/",
+      "image": "https://rizkysyaiful.github.io/images/team/maria-santos.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/lim-wei-jie/#person",
+      "name": "Lim Wei Jie",
+      "jobTitle": "Regional partner, Malaysia",
+      "description": "Lim Wei Jie is a placeholder profile for Bahtera’s regional partner in Malaysia. He will work with Malaysian companies on treasury education, policy design and the operational readiness of their finance teams. This page is a dummy profile and will be replaced with the partner’s real background on...",
+      "url": "https://rizkysyaiful.github.io/team/lim-wei-jie/",
+      "image": "https://rizkysyaiful.github.io/images/team/lim-wei-jie.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/tan-mei-ling/#person",
+      "name": "Tan Mei Ling",
+      "jobTitle": "Regional partner, Singapore",
+      "description": "Tan Mei Ling is a placeholder profile for Bahtera’s regional partner in Singapore. She will support Singapore-based institutions with custody architecture discussions and audit-ready reporting conversations. This page is a dummy profile and will be replaced with the partner’s real background once...",
+      "url": "https://rizkysyaiful.github.io/team/tan-mei-ling/",
+      "image": "https://rizkysyaiful.github.io/images/team/tan-mei-ling.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://rizkysyaiful.github.io/#website",
+      "url": "https://rizkysyaiful.github.io/",
+      "name": "Bahtera",
+      "description": "Bahtera is a Bitcoin treasury consultancy for companies and leaders across Asia, including Indonesia, Malaysia, Singapore, India and the Philippines, offering executive education, treasury policy, custody architecture, tax coordination and audit-ready reporting.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://rizkysyaiful.github.io/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://rizkysyaiful.github.io/guides/accounting-and-audit/#webpage",
+      "url": "https://rizkysyaiful.github.io/guides/accounting-and-audit/",
+      "name": "Accounting and audit for Bitcoin holdings | Bahtera",
+      "description": "What your auditor will ask and what evidence to prepare: control, existence, valuation, accounting treatment and disclosure. A practical guide that leaves conclusions to your auditor.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://rizkysyaiful.github.io/#website" },
+      "about": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "primaryImageOfPage": { "@type": "ImageObject", "url": "https://rizkysyaiful.github.io/images/og-image.png" },
+      "dateModified": "2026-10-29T00:00:00+07:00",
+      "breadcrumb": { "@id": "https://rizkysyaiful.github.io/guides/accounting-and-audit/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rizkysyaiful.github.io/guides/accounting-and-audit/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rizkysyaiful.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://rizkysyaiful.github.io/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "Accounting and audit for Bitcoin holdings", "item": "https://rizkysyaiful.github.io/guides/accounting-and-audit/" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://rizkysyaiful.github.io/guides/accounting-and-audit/#article",
+      "headline": "Accounting and audit for Bitcoin holdings",
+      "description": "What your auditor will ask and what evidence to prepare: control, existence, valuation, accounting treatment and disclosure. A practical guide that leaves conclusions to your auditor.",
+      "url": "https://rizkysyaiful.github.io/guides/accounting-and-audit/",
+      "mainEntityOfPage": { "@id": "https://rizkysyaiful.github.io/guides/accounting-and-audit/#webpage" },
+      "dateModified": "2026-10-29T00:00:00+07:00",
+      "wordCount": 584,
+      "inLanguage": "en",
+      "author": { "@id": "https://rizkysyaiful.github.io/team/faizal/#person" },
+      "publisher": { "@id": "https://rizkysyaiful.github.io/#organization" }
+    }
+  ]
+}
+</script>
+
+  <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon-64x64.png?v=5">
+  <!-- Google Fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Self host font -->
+  <!-- <link rel="preload" href="/assets/fonts/playfair-display.woff2" as="font" type="font/woff2" crossorigin> -->
+  <link href="/assets/css/style.css?v=20261029001038" rel="stylesheet">
+</head>
+
+<body class='page page-guide'>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <nav aria-label="Mobile navigation" id="main-menu-mobile" class="main-menu-mobile">
+  
+  <ul>
+    
+    
+    <li class="">
+      <a href="/about/" >About</a>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/services/" >Services</a>
+    </li>
+    
+    
+    
+    <li class="has-sub"><span class="sub-label">Thoughts</span>
+      <ul class="sub-list">
+        
+        <li class=""><a href="/myths/" >1. Myth Busting</a></li>
+        
+        <li class="active"><a href="/guides/" aria-current="page">2. Guides</a></li>
+        
+        <li class=""><a href="/blog/" >3. News</a></li>
+        
+      </ul>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/team/" >Team</a>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/contact/" >Contact</a>
+    </li>
+    
+    
+  </ul>
+</nav>
+
+  <div id="wrapper" class="wrapper">
+    <div class='header fixed-top'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height="46px" alt="Bahtera" src="/images/logo/logo.png?v=5" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height="40px" alt="Bahtera" src="/images/logo/logo-mobile.png?v=5" /></a>
+    </div>
+    <nav aria-label="Main navigation" id="main-menu" class="main-menu">
+  
+  <ul>
+    
+    
+    <li class="">
+      <a href="/about/" >About</a>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/services/" >Services</a>
+    </li>
+    
+    
+    
+    
+    
+    <li class="has-sub active">
+      <button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="sub-thoughts">Thoughts<span class="caret" aria-hidden="true"></span></button>
+      <ul class="sub-menu" id="sub-thoughts">
+        
+        <li class=""><a href="/myths/" >1. Myth Busting</a></li>
+        
+        <li class="active"><a href="/guides/" aria-current="page">2. Guides</a></li>
+        
+        <li class=""><a href="/blog/" >3. News</a></li>
+        
+      </ul>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/team/" >Team</a>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/contact/" >Contact</a>
+    </li>
+    
+    
+  </ul>
+</nav>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Open menu" aria-controls="main-menu-mobile" aria-expanded="false">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    <main id="main-content" tabindex="-1"><header class="page-heading container"><a class="eyebrow" href="/guides/">&larr; All guides</a><p class="post-meta">Guide 2 &middot; 7 min read</p><h1>Accounting and audit for Bitcoin holdings</h1><p class="lead">What your auditor will ask and what evidence to prepare: control, existence, valuation, accounting treatment and disclosure. A practical guide that leaves conclusions to your auditor.</p><p class="post-meta author-line">By <a href="/team/faizal/">Faizal Abdillah</a> &middot; Reviewed by <a href="/team/banitama/">Banitama</a> &middot; Updated <time datetime="2026-10-29T00:00:00+07:00">October 29, 2026</time></p>
+</header>
+
+
+<figure class="article-hero"><img src="/images/thumbs/accounting-and-audit.png" alt="A calculator with a gold display" width="1200" height="675"></figure>
+<article class="container content article-prose"><p>Holding Bitcoin does not break an audit. Surprising the auditor does.</p>
+
+<p>This guide shows what auditors tend to ask, and the evidence a finance team can prepare ahead of time. It does not give accounting or tax conclusions. Those belong to your auditor and advisers.</p>
+
+<h2 id="who-this-is-for">Who this is for</h2>
+
+<p>Finance controllers, CFOs and audit committee members.</p>
+
+<h2 id="start-with-a-conversation-not-a-ledger">Start with a conversation, not a ledger</h2>
+
+<p>Have you told your auditor yet? If the answer is no, do that first.</p>
+
+<p>Auditors do better with early notice. Share your draft policy, explain why you hold the asset, and ask which evidence they will want. You will avoid most surprises.</p>
+
+<h2 id="which-standard-applies">Which standard applies?</h2>
+
+<p>It depends on where you report, and on why you hold the asset. Two reference points:</p>
+
+<figure><img src="/images/figures/accounting-and-audit-1.svg" alt="Decision from why the company holds Bitcoin: inventory under IAS 2 if held for sale in the ordinary course of business, intangible asset under IAS 38 if held as a long-term asset. US GAAP under ASU 2023-08 uses fair value." loading="lazy" /><figcaption>Starting points, not conclusions. Your auditor decides which applies to you.</figcaption></figure>
+
+<ul>
+  <li><strong>IFRS.</strong> The IFRS Interpretations Committee <a href="https://www.ifrs.org/projects/completed-projects/2019/holdings-of-cryptocurrencies/">considered crypto holdings in 2019</a>. Depending on why they are held, <a href="https://www.ifrs.org/issued-standards/list-of-standards/ias-2-inventories/">IAS 2 (Inventories)</a> or <a href="https://www.ifrs.org/issued-standards/list-of-standards/ias-38-intangible-assets/">IAS 38 (Intangible Assets)</a> may be relevant.</li>
+  <li><strong>US GAAP.</strong> <a href="https://www.fasb.org/">FASB’s ASU 2023-08</a> introduced fair value measurement for certain crypto assets.</li>
+</ul>
+
+<p>Your local standards may differ. Treat this as the list of documents to read with your auditor.</p>
+
+<h2 id="what-auditors-usually-ask">What auditors usually ask</h2>
+
+<p>Think of five steps, in order.</p>
+
+<h3 id="1-control">1. Control</h3>
+
+<p>Can you show the company controls the keys? Prepare a message signed from each relevant wallet, produced in front of someone independent, and keep a record of when and by whom.</p>
+
+<h3 id="2-existence">2. Existence</h3>
+
+<p>Is the balance real? The Bitcoin ledger is public, so the auditor can check balances independently. Give them a list of addresses and the dates they should check.</p>
+
+<h3 id="3-valuation">3. Valuation</h3>
+
+<p>Which price will you use, and at what time? Pick <strong>one source and one cut-off time</strong> and write it down. Using the same method every period matters more than which one you choose.</p>
+
+<h3 id="4-treatment">4. Treatment</h3>
+
+<p>Which accounting standard applies, and why? Prepare a short paper stating the reason you hold the asset and the treatment you propose. Let your auditor challenge it.</p>
+
+<h3 id="5-disclosure">5. Disclosure</h3>
+
+<p>What do your notes say about the holding, its risks and any restrictions? Include the custody arrangement, because third-party custody can raise questions about who legally holds the asset.</p>
+
+<h2 id="the-evidence-pack">The evidence pack</h2>
+
+<p>Prepare these before year end, not during the audit:</p>
+
+<ol>
+  <li>List of wallet addresses and the people who control each.</li>
+  <li>Signed messages proving control.</li>
+  <li>Custody agreement or written self-custody procedures.</li>
+  <li>Approval records for each transaction.</li>
+  <li>Price-source policy and the valuation each period.</li>
+  <li>Reconciliation of holdings to the ledger.</li>
+</ol>
+
+<p>The <a href="/guides/treasury-policy/">treasury policy guide</a> lists where these fit.</p>
+
+<h2 id="controls-auditors-like-to-see">Controls auditors like to see</h2>
+
+<ul>
+  <li><strong>Separation of duties.</strong> The person who proposes is not the person who approves.</li>
+  <li><strong>A signing quorum,</strong> so no single person can move funds.</li>
+  <li><strong>Regular reconciliation</strong> between your records and the public ledger.</li>
+  <li><strong>Tested recovery,</strong> with the date of the last drill.</li>
+</ul>
+
+<h2 id="common-mistakes">Common mistakes</h2>
+
+<ul>
+  <li>Telling the auditor after the first purchase.</li>
+  <li>No signed proof of control.</li>
+  <li>Changing the price source from period to period.</li>
+  <li>Funds held by a third party with no written agreement.</li>
+  <li>No record of who approved each move.</li>
+</ul>
+
+<h2 id="the-bottom-line">The bottom line</h2>
+
+<p>Auditing Bitcoin is mostly documentation. If you can show control, existence, a consistent valuation method and a written policy, you have given your auditor what they need.</p>
+
+<p>Ask them early. Let them tell you what evidence they prefer.</p>
+
+<h2 id="checklist">Checklist</h2>
+
+<ul>
+  <li>Auditor informed and consulted before purchase</li>
+  <li>Applicable standards identified with the auditor</li>
+  <li>Signed proof of control prepared and dated</li>
+  <li>Price source and cut-off time written down</li>
+  <li>Custody agreement or procedures documented</li>
+  <li>Reconciliation process set</li>
+  <li>Disclosure wording drafted for review</li>
+</ul>
+</article>
+
+<aside class="container related-posts"><span class="eyebrow">Related myths</span><div class="card-grid"><a class="profile-card" href="/myths/cannot-audit-or-account/"><span class="eyebrow">Myth 6</span><h2>"We can't audit or account for it."</h2><span>Read our answer &rarr;</span></a><a class="profile-card" href="/myths/regulators-will-not-allow/"><span class="eyebrow">Myth 7</span><h2>"Regulators won't allow companies to hold it."</h2><span>Read our answer &rarr;</span></a></div></aside>
+<p class="container small-note disclaimer">This guide is educational. Legal, tax and accounting conclusions stay with your own qualified advisers.</p>
+<aside class="section-cta container">
+  <div><span class="eyebrow">Start with a conversation</span><h2>Bring clarity to your next step.</h2><p>Explore the right education and implementation support for your team.</p></div>
+  <a class="button" href="/contact/">Discuss your needs <span aria-hidden="true">&rarr;</span></a>
+</aside>
+
+</main>
+  </div>
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <div class="logo-footer">
+            <a href="/"><img height="43px" alt="Bahtera" src="/images/logo/logo-footer.png?v=5" /></a>
+            <p class="brand-tagline">Institution-Level Bitcoin Consultancy.</p>
+            <p class="brand-regions">Indonesia &middot; Malaysia &middot; Singapore &middot; India &middot; Philippines</p>
+          </div>
+          <ul>
+            
+            
+            <li class="">
+              <a href="/guides/">Guides</a>
+            </li>
+            
+            <li class="">
+              <a href="/myths/">Myth Busting</a>
+            </li>
+            
+            <li class="">
+              <a href="/blog/">News</a>
+            </li>
+            
+            <li class="">
+              <a href="/contact/">Contact</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            <div class="social">
+  
+</div>
+
+          
+          
+          <div class="copyright">&copy; 2026 PT. Bahtera Tujuan Cemerlang. All rights reserved.</div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script type="text/javascript" src="/assets/js/scripts.js?v=20261029001038"></script>
+  
+</body>
+</html>

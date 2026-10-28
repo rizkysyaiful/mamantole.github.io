@@ -1,15 +1,7 @@
 ---
 layout: default
-bodyClass: "page-teams"
+bodyClass: page-team
 ---
-
-<div class="container pb-10 pt-10 pt-md-10 pb-md-10">
-  <div class="row justify-content-start">
-    <div class="col-12 col-md-8">
-      <div class="team team-single">
-        <h1 class="title">{{page.title}}</h1>
-        <div class="content">{{content}}</div>
-      </div>
-    </div>
-  </div>
-</div>
+<header class="page-heading container"><a class="eyebrow" href="{{ '/team/' | relative_url }}">&larr; Meet the team</a>{% if page.group == 'partner' %}<p class="post-meta">Regional partner &middot; {{ page.country }}</p>{% endif %}<h1>{{ page.title }}</h1><p class="lead">{{ page.jobtitle }}</p></header>
+<div class="container reading-layout"><article class="content prose">{{ content }}{% assign a_guides = site.guides | where: 'author', page.slug | sort: 'weight' %}{% assign a_myths = site.myths | where: 'author', page.slug | sort: 'weight' %}{% assign a_posts = site.posts | where: 'author', page.slug %}{% if a_guides.size > 0 %}<h2>Guides by {{ page.title }}</h2><ul>{% for x in a_guides %}<li><a href="{{ x.url | relative_url }}">{{ x.title }}</a></li>{% endfor %}</ul>{% endif %}{% if a_myths.size > 0 %}<h2>Myths answered by {{ page.title }}</h2><ul>{% for x in a_myths %}<li><a href="{{ x.url | relative_url }}">{{ x.title }}</a></li>{% endfor %}</ul>{% endif %}{% if a_posts.size > 0 %}<h2>Articles by {{ page.title }}</h2><ul>{% for x in a_posts %}<li><a href="{{ x.url | relative_url }}">{{ x.title }}</a></li>{% endfor %}</ul>{% endif %}</article><aside class="side-note"><img class="portrait" src="{{ page.image | relative_url }}" alt="{{ page.title }}"><blockquote>{{ page.quote }}</blockquote></aside></div>
+{% include section-cta.html %}

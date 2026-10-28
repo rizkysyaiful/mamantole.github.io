@@ -1,0 +1,8 @@
+---
+layout: default
+bodyClass: page-post
+---
+<header class="page-heading container"><a class="eyebrow" href="{{ '/blog/' | relative_url }}">&larr; All articles</a><p class="post-meta">{{ page.category }} &middot; {{ page.reading_time }} min read</p><h1>{{ page.title }}</h1><p class="lead">{{ page.description }}</p>{% include byline.html author=page.author reviewer=page.reviewer %}<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time></p></header>
+<article class="container content article-prose">{{ content }}</article>
+<aside class="container related-posts"><span class="eyebrow">Continue reading</span><div class="card-grid">{% assign others = site.posts | where_exp: 'post', 'post.url != page.url' %}{% for post in others limit:2 %}<a class="profile-card" href="{{ post.url | relative_url }}"><span class="eyebrow">{{ post.category }}</span><h2>{{ post.title }}</h2><span>Read article &rarr;</span></a>{% endfor %}</div></aside>
+{% include section-cta.html %}

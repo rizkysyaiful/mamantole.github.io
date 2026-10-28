@@ -1,12 +1,9 @@
 ---
 title: Team
 layout: teams
-description: Team
-permalink: "/team/"
-intro_image_absolute: true
-intro_image_hide_on_mobile: false
+description: Meet the educators and practitioners behind Bahtera.
+permalink: /team/
+seo_title: "Our Team | Bahtera Bitcoin Treasury Consultants"
+meta_description: "Meet Bahtera's Bitcoin treasury team: Ricky Saif (corporate education), Faizal Abdillah (banking) and Banitama (software development), supported by regional partners in Malaysia, Singapore, India and the Philippines."
 ---
-
-# Meet The Team
-
-Our team of qualified accountants and financial consultants can help your business at any stage of it's growth.
+Our founding team brings different backgrounds and a shared commitment to helping leaders understand Bitcoin and translate questions into a practical plan. Regional partners bring local context across Asia.

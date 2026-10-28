@@ -1,0 +1,23 @@
+---
+layout: null
+permalink: /sitemap.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- assign docs = site.html_pages | concat: site.posts -%}
+{%- for collection in site.collections -%}
+  {%- if collection.output and collection.label != 'posts' -%}{%- assign docs = docs | concat: collection.docs -%}{%- endif -%}
+{%- endfor -%}
+{%- for doc in docs -%}
+  {%- if doc.noindex or doc.sitemap == false or doc.url contains '404' -%}{%- continue -%}{%- endif %}
+  <url>
+    <loc>{{ doc.url | replace: 'index.html', '' | absolute_url | xml_escape }}</loc>
+    {%- assign lastmod = doc.last_modified_at -%}
+    {%- if doc.collection == 'posts' -%}{%- assign lastmod = lastmod | default: doc.date -%}{%- endif -%}
+    {%- if lastmod %}
+    <lastmod>{{ lastmod | date_to_xmlschema }}</lastmod>
+    {%- endif %}
+  </url>
+{%- endfor %}
+</urlset>

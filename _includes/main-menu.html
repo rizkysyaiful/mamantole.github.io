@@ -1,10 +1,23 @@
-<div id="main-menu" class="main-menu">
+<nav aria-label="Main navigation" id="main-menu" class="main-menu">
   {% assign mainmenu = site.data.menus.main | sort: 'weight'  %}
   <ul>
     {% for item in mainmenu %}
-    <li class="{% if item.url == page.url %}active{% endif %}">
-      <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
+    {% if item.children %}
+    {% assign parent_active = false %}
+    {% for child in item.children %}{% if page.url contains child.url %}{% assign parent_active = true %}{% endif %}{% endfor %}
+    <li class="has-sub{% if parent_active %} active{% endif %}">
+      <button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="sub-{{ item.name | slugify }}">{{ item.name }}<span class="caret" aria-hidden="true"></span></button>
+      <ul class="sub-menu" id="sub-{{ item.name | slugify }}">
+        {% for child in item.children %}
+        <li class="{% if page.url contains child.url %}active{% endif %}"><a href="{{ child.url | relative_url }}" {% if page.url contains child.url %}aria-current="page"{% endif %}>{{ child.name }}</a></li>
+        {% endfor %}
+      </ul>
     </li>
+    {% else %}
+    <li class="{% if page.url contains item.url %}active{% endif %}">
+      <a href="{{ item.url | relative_url }}" {% if page.url contains item.url %}aria-current="page"{% endif %}>{{ item.name }}</a>
+    </li>
+    {% endif %}
     {% endfor %}
   </ul>
-</div>
+</nav>

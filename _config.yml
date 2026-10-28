@@ -1,16 +1,46 @@
 
+# Canonical host used for canonical links, sitemap, feed and structured data.
+# The GitHub Pages workflow supplies baseurl (/mamantole.github.io) at build time.
+# Change this if the site moves to a custom domain.
+url: 'https://rizkysyaiful.github.io'
 baseurl: '/'
 permalink: pretty
-title: 'Bitcoinstitution'
+title: 'Bahtera'
+tagline: 'Institution-Level Bitcoin Consultancy.'
+description: 'Bahtera is a Bitcoin treasury consultancy for companies and leaders across Asia, including Indonesia, Malaysia, Singapore, India and the Philippines, offering executive education, treasury policy, custody architecture, tax coordination and audit-ready reporting.'
+lang: 'en'
+locale: 'en_US'
+image: 'images/og-image.png'
+excerpt_separator: '<!--more-->'
+
+# Facts about the business, used in structured data (JSON-LD) and llms.txt.
+organization:
+  name: 'Bahtera'
+  type: 'ProfessionalService'
+  logo: 'images/logo/logo-square.png'
+  area_served:
+    - Indonesia
+    - Malaysia
+    - Singapore
+    - India
+    - Philippines
+  knows_about:
+    - Bitcoin
+    - Bitcoin treasury
+    - Corporate treasury management
+    - Treasury policy design
+    - Bitcoin custody (multisig and cold storage)
+    - Bitcoin accounting and audit
+    - Executive Bitcoin education
 
 logo:
-  mobile: "images/logo/logo-mobile.svg"
-  mobile_height: "32px"
-  mobile_width: "32px"
-  desktop: "images/logo/logo.svg"
-  desktop_height: "32px"
-  footer: "images/logo/logo-footer.svg"
-  footer_height: "32px"
+  mobile: "images/logo/logo-mobile.png"
+  mobile_height: "40px"
+  mobile_width: "40px"
+  desktop: "images/logo/logo.png"
+  desktop_height: "46px"
+  footer: "images/logo/logo-footer.png"
+  footer_height: "43px"
 
 collections:
   myths:
@@ -21,6 +51,12 @@ collections:
     sort_by: weight
   team:
     output: true
+  guides:
+    output: true
+    sort_by: weight
+
+# Example banner hidden: pages are final.
+example_content: false
 
 defaults:
   - scope:
@@ -35,9 +71,14 @@ defaults:
       layout: "service"
   - scope:
       path: ""
-      type: "teams"
+      type: "team"
     values:
       layout: "team"
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: "guide"
 
 sass:
   style: compressed # possible values: nested expanded compact compressed
@@ -56,3 +97,5 @@ exclude:
   - LICENSE.md
   - LICENSE
   - README.md
+  - REDESIGN-PLAN.md
+  - tools

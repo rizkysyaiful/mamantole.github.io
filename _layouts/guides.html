@@ -1,0 +1,7 @@
+---
+layout: default
+bodyClass: page-guides
+---
+<header class="page-heading container"><span class="eyebrow">Guides</span><h1>{{ page.title }}</h1><div class="lead">{{ content }}</div></header>
+<section class="container card-grid" aria-label="Guides">{% assign guides = site.guides | sort: 'weight' %}{% for g in guides %}{% assign a = site.team | where: 'slug', g.author | first %}<article class="profile-card">{% if g.thumbnail %}<a class="card-thumb-link" href="{{ g.url | relative_url }}" tabindex="-1" aria-hidden="true"><img class="card-thumb" src="{{ g.thumbnail | relative_url }}" alt="" loading="lazy"></a>{% endif %}<span class="eyebrow">Guide {{ g.weight }}{% if a %} &middot; {{ a.title }}{% endif %}</span><h2><a href="{{ g.url | relative_url }}">{{ g.title }}</a></h2><p>{{ g.description }}</p><a class="text-link" href="{{ g.url | relative_url }}">Read the guide &rarr;</a></article>{% endfor %}</section>
+{% include section-cta.html %}

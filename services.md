@@ -1,12 +1,7 @@
 ---
 title: Services
 layout: services
-description: Services
-intro_image: "images/illustrations/reading.svg"
-intro_image_absolute: true
-intro_image_hide_on_mobile: true
+description: Bitcoin treasury education and implementation support, covering policy design, custody architecture, regulatory coordination, and reporting.
+seo_title: "Bitcoin Treasury Services: Policy, Custody & Audit | Bahtera"
 ---
-
-# Services that grow with your business
-
-Aliquam erat volutpat. Morbi nisl tortor, dignissim eget efficitur vel, auctor non felis. Fusce quis viverra mi. Aenean quis massa pretium, ullamcorper nisi eget, hendrerit odio.
+We help connect your treasury objectives with the people, policies, and processes needed to put them into practice. Start with education, then define the support your organisation needs.

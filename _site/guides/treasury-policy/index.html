@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bitcoin treasury policy: what to put in it | Bahtera</title>
+<meta name="description" content="A one-page policy your board can read in five minutes: purpose, allocation limits, buying method, custody, approvals, reporting and review. This guide shows what each section covers and what to decide.">
+<link rel="canonical" href="https://rizkysyaiful.github.io/guides/treasury-policy/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="Bahtera">
+<meta name="theme-color" content="#172B4D">
+<link rel="alternate" type="application/atom+xml" title="Bahtera blog" href="/feed.xml">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="apple-touch-icon" href="/images/logo/logo-square.png">
+
+<meta property="og:site_name" content="Bahtera">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bitcoin treasury policy: what to put in it">
+<meta property="og:description" content="A one-page policy your board can read in five minutes: purpose, allocation limits, buying method, custody, approvals, reporting and review. This guide shows what each section covers and what to decide.">
+<meta property="og:url" content="https://rizkysyaiful.github.io/guides/treasury-policy/">
+<meta property="og:image" content="https://rizkysyaiful.github.io/images/og-image.png">
+<meta property="og:image:alt" content="Bahtera – Institution-Level Bitcoin Consultancy.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bitcoin treasury policy: what to put in it">
+<meta name="twitter:description" content="A one-page policy your board can read in five minutes: purpose, allocation limits, buying method, custody, approvals, reporting and review. This guide shows what each section covers and what to decide.">
+<meta name="twitter:image" content="https://rizkysyaiful.github.io/images/og-image.png"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://rizkysyaiful.github.io/#organization",
+      "name": "Bahtera",
+      "url": "https://rizkysyaiful.github.io/",
+      "slogan": "Institution-Level Bitcoin Consultancy.",
+      "description": "Bahtera is a Bitcoin treasury consultancy for companies and leaders across Asia, including Indonesia, Malaysia, Singapore, India and the Philippines, offering executive education, treasury policy, custody architecture, tax coordination and audit-ready reporting.",
+      "logo": { "@type": "ImageObject", "url": "https://rizkysyaiful.github.io/images/logo/logo-square.png", "width": 512, "height": 512 },
+      "image": "https://rizkysyaiful.github.io/images/og-image.png",
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }],
+      "knowsAbout": ["Bitcoin","Bitcoin treasury","Corporate treasury management","Treasury policy design","Bitcoin custody (multisig and cold storage)","Bitcoin accounting and audit","Executive Bitcoin education"],
+      "employee": [{ "@id": "https://rizkysyaiful.github.io/team/ricky/#person" }, { "@id": "https://rizkysyaiful.github.io/team/faizal/#person" }, { "@id": "https://rizkysyaiful.github.io/team/banitama/#person" }, { "@id": "https://rizkysyaiful.github.io/team/dimas/#person" }, { "@id": "https://rizkysyaiful.github.io/team/arjun-mehta/#person" }, { "@id": "https://rizkysyaiful.github.io/team/maria-santos/#person" }, { "@id": "https://rizkysyaiful.github.io/team/lim-wei-jie/#person" }, { "@id": "https://rizkysyaiful.github.io/team/tan-mei-ling/#person" }],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Bitcoin treasury services",
+        "itemListElement": [{ "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/policy_design/#service" } }, { "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/custody_architecture/#service" } }, { "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/accounting_audit/#service" } }, { "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/regulatory_guidance/#service" } }]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/policy_design/#service",
+      "name": "Treasury Policy Design",
+      "serviceType": "Treasury Policy Design",
+      "description": "A documented framework for treasury decisions, responsibilities, and internal review.",
+      "url": "https://rizkysyaiful.github.io/services/policy_design/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/custody_architecture/#service",
+      "name": "Custody Architecture",
+      "serviceType": "Custody Architecture",
+      "description": "Custody planning that connects technical design with everyday responsibilities.",
+      "url": "https://rizkysyaiful.github.io/services/custody_architecture/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/accounting_audit/#service",
+      "name": "Accounting & Audit Support",
+      "serviceType": "Accounting & Audit Support",
+      "description": "Operational records and reporting workflows designed for review with your finance team.",
+      "url": "https://rizkysyaiful.github.io/services/accounting_audit/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/regulatory_guidance/#service",
+      "name": "Regulatory & Tax Guidance",
+      "serviceType": "Regulatory & Tax Guidance",
+      "description": "A structured way to identify questions and coordinate with your legal and tax advisers.",
+      "url": "https://rizkysyaiful.github.io/services/regulatory_guidance/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/ricky/#person",
+      "name": "Ricky Saif",
+      "jobTitle": "Corporate education",
+      "description": "Ricky Saif has educated corporations since 2013, focusing today on exposing The Fiat Flood crisis – where inflation silently drains cash reserves while traditional assets fail. Ricky empowers pragmatic leaders to adopt Bitcoin treasuries as an inflation-proof solution. He works exclusively with e...",
+      "url": "https://rizkysyaiful.github.io/team/ricky/",
+      "image": "https://rizkysyaiful.github.io/images/team/ricky.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/faizal/#person",
+      "name": "Faizal Abdillah",
+      "jobTitle": "Banking background",
+      "description": "Faizal Abdillah professional journey began in the banking sector, where he gained firsthand insight into traditional finance. The discovery of Bitcoin—a technology with the potential to render banks obsolete—sparked a deep curiosity. As he delved further, he came to believe that many societal iss...",
+      "url": "https://rizkysyaiful.github.io/team/faizal/",
+      "image": "https://rizkysyaiful.github.io/images/team/faizal.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/banitama/#person",
+      "name": "Banitama",
+      "jobTitle": "Software development",
+      "description": "Banitama is a software developer and Bitcoin advocate who began using BTC in 2014—initially unaware of its revolutionary potential until discovering The Bitcoin Standard in 2018, which unlocked his deep dive into monetary history and economics. Now based in Sweden (home of the world’s first centr...",
+      "url": "https://rizkysyaiful.github.io/team/banitama/",
+      "image": "https://rizkysyaiful.github.io/images/team/banitama.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/dimas/#person",
+      "name": "Dimas",
+      "jobTitle": "Regional partner, Indonesia",
+      "description": "Dimas is Bahtera’s partner in Indonesia. He is a co-founder of Bitcoin Indonesia and of Bitcoin House Bali, and hosts the Bitcoin Indonesia Podcast. Based in Bandung, he is a long-time Bitcoin educator and community builder. With Bahtera he brings executive education and treasury policy discussio...",
+      "url": "https://rizkysyaiful.github.io/team/dimas/",
+      "image": "https://rizkysyaiful.github.io/images/team/dimas.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/arjun-mehta/#person",
+      "name": "Arjun Mehta",
+      "jobTitle": "Regional partner, India",
+      "description": "Arjun Mehta is a placeholder profile for Bahtera’s regional partner in India. He will support Indian companies and family offices with executive education, treasury policy discussions and coordination with local tax and accounting advisers. This page is a dummy profile and will be replaced with t...",
+      "url": "https://rizkysyaiful.github.io/team/arjun-mehta/",
+      "image": "https://rizkysyaiful.github.io/images/team/arjun-mehta.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/maria-santos/#person",
+      "name": "Maria Santos",
+      "jobTitle": "Regional partner, Philippines",
+      "description": "Maria Santos is a placeholder profile for Bahtera’s regional partner in the Philippines. She will help Filipino businesses and leaders explore Bitcoin treasury through executive education and practical, locally-aware implementation support. This page is a dummy profile and will be replaced with t...",
+      "url": "https://rizkysyaiful.github.io/team/maria-santos/",
+      "image": "https://rizkysyaiful.github.io/images/team/maria-santos.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/lim-wei-jie/#person",
+      "name": "Lim Wei Jie",
+      "jobTitle": "Regional partner, Malaysia",
+      "description": "Lim Wei Jie is a placeholder profile for Bahtera’s regional partner in Malaysia. He will work with Malaysian companies on treasury education, policy design and the operational readiness of their finance teams. This page is a dummy profile and will be replaced with the partner’s real background on...",
+      "url": "https://rizkysyaiful.github.io/team/lim-wei-jie/",
+      "image": "https://rizkysyaiful.github.io/images/team/lim-wei-jie.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/tan-mei-ling/#person",
+      "name": "Tan Mei Ling",
+      "jobTitle": "Regional partner, Singapore",
+      "description": "Tan Mei Ling is a placeholder profile for Bahtera’s regional partner in Singapore. She will support Singapore-based institutions with custody architecture discussions and audit-ready reporting conversations. This page is a dummy profile and will be replaced with the partner’s real background once...",
+      "url": "https://rizkysyaiful.github.io/team/tan-mei-ling/",
+      "image": "https://rizkysyaiful.github.io/images/team/tan-mei-ling.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://rizkysyaiful.github.io/#website",
+      "url": "https://rizkysyaiful.github.io/",
+      "name": "Bahtera",
+      "description": "Bahtera is a Bitcoin treasury consultancy for companies and leaders across Asia, including Indonesia, Malaysia, Singapore, India and the Philippines, offering executive education, treasury policy, custody architecture, tax coordination and audit-ready reporting.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://rizkysyaiful.github.io/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://rizkysyaiful.github.io/guides/treasury-policy/#webpage",
+      "url": "https://rizkysyaiful.github.io/guides/treasury-policy/",
+      "name": "Bitcoin treasury policy: what to put in it | Bahtera",
+      "description": "A one-page policy your board can read in five minutes: purpose, allocation limits, buying method, custody, approvals, reporting and review. This guide shows what each section covers and what to decide.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://rizkysyaiful.github.io/#website" },
+      "about": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "primaryImageOfPage": { "@type": "ImageObject", "url": "https://rizkysyaiful.github.io/images/og-image.png" },
+      "dateModified": "2026-10-29T00:00:00+07:00",
+      "breadcrumb": { "@id": "https://rizkysyaiful.github.io/guides/treasury-policy/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rizkysyaiful.github.io/guides/treasury-policy/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rizkysyaiful.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://rizkysyaiful.github.io/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "Bitcoin treasury policy: what to put in it", "item": "https://rizkysyaiful.github.io/guides/treasury-policy/" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://rizkysyaiful.github.io/guides/treasury-policy/#article",
+      "headline": "Bitcoin treasury policy: what to put in it",
+      "description": "A one-page policy your board can read in five minutes: purpose, allocation limits, buying method, custody, approvals, reporting and review. This guide shows what each section covers and what to decide.",
+      "url": "https://rizkysyaiful.github.io/guides/treasury-policy/",
+      "mainEntityOfPage": { "@id": "https://rizkysyaiful.github.io/guides/treasury-policy/#webpage" },
+      "dateModified": "2026-10-29T00:00:00+07:00",
+      "wordCount": 670,
+      "inLanguage": "en",
+      "author": { "@id": "https://rizkysyaiful.github.io/team/faizal/#person" },
+      "publisher": { "@id": "https://rizkysyaiful.github.io/#organization" }
+    }
+  ]
+}
+</script>
+
+  <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon-64x64.png?v=5">
+  <!-- Google Fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Self host font -->
+  <!-- <link rel="preload" href="/assets/fonts/playfair-display.woff2" as="font" type="font/woff2" crossorigin> -->
+  <link href="/assets/css/style.css?v=20261029001038" rel="stylesheet">
+</head>
+
+<body class='page page-guide'>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <nav aria-label="Mobile navigation" id="main-menu-mobile" class="main-menu-mobile">
+  
+  <ul>
+    
+    
+    <li class="">
+      <a href="/about/" >About</a>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/services/" >Services</a>
+    </li>
+    
+    
+    
+    <li class="has-sub"><span class="sub-label">Thoughts</span>
+      <ul class="sub-list">
+        
+        <li class=""><a href="/myths/" >1. Myth Busting</a></li>
+        
+        <li class="active"><a href="/guides/" aria-current="page">2. Guides</a></li>
+        
+        <li class=""><a href="/blog/" >3. News</a></li>
+        
+      </ul>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/team/" >Team</a>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/contact/" >Contact</a>
+    </li>
+    
+    
+  </ul>
+</nav>
+
+  <div id="wrapper" class="wrapper">
+    <div class='header fixed-top'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height="46px" alt="Bahtera" src="/images/logo/logo.png?v=5" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height="40px" alt="Bahtera" src="/images/logo/logo-mobile.png?v=5" /></a>
+    </div>
+    <nav aria-label="Main navigation" id="main-menu" class="main-menu">
+  
+  <ul>
+    
+    
+    <li class="">
+      <a href="/about/" >About</a>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/services/" >Services</a>
+    </li>
+    
+    
+    
+    
+    
+    <li class="has-sub active">
+      <button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="sub-thoughts">Thoughts<span class="caret" aria-hidden="true"></span></button>
+      <ul class="sub-menu" id="sub-thoughts">
+        
+        <li class=""><a href="/myths/" >1. Myth Busting</a></li>
+        
+        <li class="active"><a href="/guides/" aria-current="page">2. Guides</a></li>
+        
+        <li class=""><a href="/blog/" >3. News</a></li>
+        
+      </ul>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/team/" >Team</a>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/contact/" >Contact</a>
+    </li>
+    
+    
+  </ul>
+</nav>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Open menu" aria-controls="main-menu-mobile" aria-expanded="false">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    <main id="main-content" tabindex="-1"><header class="page-heading container"><a class="eyebrow" href="/guides/">&larr; All guides</a><p class="post-meta">Guide 1 &middot; 8 min read</p><h1>Bitcoin treasury policy: what to put in it</h1><p class="lead">A one-page policy your board can read in five minutes: purpose, allocation limits, buying method, custody, approvals, reporting and review. This guide shows what each section covers and what to decide.</p><p class="post-meta author-line">By <a href="/team/faizal/">Faizal Abdillah</a> &middot; Reviewed by <a href="/team/ricky/">Ricky Saif</a> &middot; Updated <time datetime="2026-10-29T00:00:00+07:00">October 29, 2026</time></p>
+</header>
+
+
+<figure class="article-hero"><img src="/images/thumbs/treasury-policy.png" alt="A policy document with a gold checkmark" width="1200" height="675"></figure>
+<article class="container content article-prose"><p>If your company is thinking about Bitcoin, the first document you need is not a wallet. It is a policy.</p>
+
+<p>A policy turns an opinion into a decision the board can approve, an auditor can test and a successor can follow. This guide walks through what to put in it.</p>
+
+<h2 id="who-this-is-for">Who this is for</h2>
+
+<p>CFOs, treasurers, finance controllers and anyone who will draft the paper that goes to the board.</p>
+
+<h2 id="why-a-written-policy-comes-first">Why a written policy comes first</h2>
+
+<p>Have you ever watched a treasury decision get made in a hallway conversation? It works until the person who made it leaves.</p>
+
+<p>A policy answers four things before anything is bought: why, how much, who decides and how we stop. Banks write these down for every risk they take, and your company can too.</p>
+
+<h2 id="the-seven-sections">The seven sections</h2>
+
+<figure><img src="/images/figures/treasury-policy-1.svg" alt="Seven sections of a one-page policy: purpose, allocation, buying method, custody, authority, reporting and review." loading="lazy" /><figcaption>One page, seven sections. Short enough that directors actually read it.</figcaption></figure>
+
+<h3 id="1-purpose-and-scope">1. Purpose and scope</h3>
+
+<p>State in two or three sentences <strong>what risk this covers</strong>. For example: “to hold a limited reserve that is not exposed to the issuance of any single currency.”</p>
+
+<p>Say what it is not for. For example: not for operating cash, not for speculation, not for short-term trading. A clear “not for” protects the finance team later.</p>
+
+<h3 id="2-allocation">2. Allocation</h3>
+
+<p>Set a <strong>cap as a share of reserves</strong>, and a floor for liquid cash that must remain. Name the reserves it applies to.</p>
+
+<p>Decide the cap with your own numbers, not someone else’s. A useful test is: if the position fell by half, could we still pay salaries and suppliers for the planning period without selling it?</p>
+
+<h3 id="3-buying-method">3. Buying method</h3>
+
+<p>Say <strong>how</strong> you will build the position. A common choice is gradual purchases on a schedule, so no single day carries the decision. Name the licensed venues you may use, and the limits per transaction.</p>
+
+<h3 id="4-custody">4. Custody</h3>
+
+<p>Pick the custody model and write it down: self-custody with a signing quorum, a regulated custodian, or a mix. List who holds what, where backups sit, and how recovery works.</p>
+
+<p>The <a href="/guides/custody-options/">custody guide</a> compares the options.</p>
+
+<h3 id="5-authority-and-approvals">5. Authority and approvals</h3>
+
+<p>Spell out who may <strong>propose</strong>, <strong>approve</strong> and <strong>execute</strong>, and who can say stop. Separate the roles so no one person can do all three.</p>
+
+<p>A simple matrix works: action in one column, role in the next, and a limit in the last.</p>
+
+<h3 id="6-accounting-and-reporting">6. Accounting and reporting</h3>
+
+<p>Say which accounting treatment you expect to apply, subject to your auditor, and how often the board sees the position. Include the price source you will use for valuation.</p>
+
+<p>The <a href="/guides/accounting-and-audit/">accounting and audit guide</a> covers what auditors ask.</p>
+
+<h3 id="7-review-and-exit">7. Review and exit</h3>
+
+<p>Set a review date, and write the <strong>triggers</strong> that force an early review: the position falling below or rising above set levels, a change in law, a custody incident, or a change in the company’s circumstances.</p>
+
+<p>Also write what you will do in each case: pause purchases, rebalance, or reduce.</p>
+
+<h2 id="common-mistakes">Common mistakes</h2>
+
+<ul>
+  <li>Writing the policy after the first purchase.</li>
+  <li>A cap with no reason behind it.</li>
+  <li>No named owner for each custody key.</li>
+  <li>Approval by one person.</li>
+  <li>No review date, so the policy never changes.</li>
+  <li>Copying another company’s numbers.</li>
+</ul>
+
+<h2 id="a-one-page-template">A one-page template</h2>
+
+<p>Use these headings as the skeleton and fill each with two or three sentences:</p>
+
+<ol>
+  <li>Purpose and what it is not for</li>
+  <li>Allocation cap and liquidity floor</li>
+  <li>Buying method and approved venues</li>
+  <li>Custody model, roles and recovery</li>
+  <li>Authority matrix</li>
+  <li>Accounting, valuation and board reporting</li>
+  <li>Review date and triggers</li>
+</ol>
+
+<h2 id="the-bottom-line">The bottom line</h2>
+
+<p>A good policy is short, specific and honest about the trade-offs. If a director can read it in five minutes and say what the company will do in a bad month, it is doing its job.</p>
+
+<p>Legal, tax and accounting conclusions stay with your own advisers. Bring this draft to them.</p>
+
+<h2 id="checklist">Checklist</h2>
+
+<ul>
+  <li>Purpose written, with what it is not for</li>
+  <li>Cap and liquidity floor set from your own cash flows</li>
+  <li>Buying method and venues approved</li>
+  <li>Custody model, roles and recovery written</li>
+  <li>Authority matrix with separated roles</li>
+  <li>Accounting treatment discussed with the auditor</li>
+  <li>Review date and triggers set</li>
+</ul>
+</article>
+
+<aside class="container related-posts"><span class="eyebrow">Related myths</span><div class="card-grid"><a class="profile-card" href="/myths/inflation-under-control/"><span class="eyebrow">Myth 2</span><h2>"Inflation is under control; our cash is fine."</h2><span>Read our answer &rarr;</span></a><a class="profile-card" href="/myths/too-volatile-for-treasury/"><span class="eyebrow">Myth 4</span><h2>"It's too volatile for a company treasury."</h2><span>Read our answer &rarr;</span></a></div></aside>
+<p class="container small-note disclaimer">This guide is educational. Legal, tax and accounting conclusions stay with your own qualified advisers.</p>
+<aside class="section-cta container">
+  <div><span class="eyebrow">Start with a conversation</span><h2>Bring clarity to your next step.</h2><p>Explore the right education and implementation support for your team.</p></div>
+  <a class="button" href="/contact/">Discuss your needs <span aria-hidden="true">&rarr;</span></a>
+</aside>
+
+</main>
+  </div>
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <div class="logo-footer">
+            <a href="/"><img height="43px" alt="Bahtera" src="/images/logo/logo-footer.png?v=5" /></a>
+            <p class="brand-tagline">Institution-Level Bitcoin Consultancy.</p>
+            <p class="brand-regions">Indonesia &middot; Malaysia &middot; Singapore &middot; India &middot; Philippines</p>
+          </div>
+          <ul>
+            
+            
+            <li class="">
+              <a href="/guides/">Guides</a>
+            </li>
+            
+            <li class="">
+              <a href="/myths/">Myth Busting</a>
+            </li>
+            
+            <li class="">
+              <a href="/blog/">News</a>
+            </li>
+            
+            <li class="">
+              <a href="/contact/">Contact</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            <div class="social">
+  
+</div>
+
+          
+          
+          <div class="copyright">&copy; 2026 PT. Bahtera Tujuan Cemerlang. All rights reserved.</div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script type="text/javascript" src="/assets/js/scripts.js?v=20261029001038"></script>
+  
+</body>
+</html>

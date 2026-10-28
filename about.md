@@ -1,87 +1,45 @@
 ---
-title: About
+title: A thoughtful approach to Bitcoin treasury.
 layout: page
-description: About
-bodyClass: page-about
+eyebrow: About us
+show_regional_map: true
+description: Meet Bahtera, a team bringing together education, banking experience, and software development to support Bitcoin treasury implementation.
+lead: We bring education, banking experience, and technical thinking to a complex conversation.
+seo_title: "About Bahtera | Bitcoin Treasury Consultants in Asia"
 ---
 
-Lorem markdownum aequalis strigis. _Saetigeri iubeas_, vultu huic alvum nondum
-de obside ut laniavit arbor palmis, cum quin. Rupes vetat videndo, armigerae
-crimen habet Priamum nec.
+## Who we are
 
-![Accounting Services](/images/thom-holmes-Lrfw0U_o9I0-unsplash.jpg)
+Bahtera helps leaders explore and implement Bitcoin treasury. Our team brings together an educator, a former banking professional, and a software developer, with a shared interest in helping people understand Bitcoin and make deliberate decisions.
 
-# Objectives
+Our work connects the questions asked in the boardroom with the practical details of policy, custody, operations, and reporting.
 
-Financial accounting and financial reporting are often used as synonyms.
+## Across Asia
 
-1. According to International Financial Reporting Standards: the objective of financial reporting is:
-2. To provide financial information that is useful to existing and potential investors, lenders and other creditors in making decisions about providing resources to the reporting entity.
-3. According to the European Accounting Association:
+We operate in Indonesia, Malaysia, Singapore, India, and the Philippines with a founding team and local regional partners. The regional presence helps us frame education and implementation around each team’s operating context, while specialist legal and tax conclusions remain with qualified advisers.
 
-## Relevance
+## Why “Bahtera”?
 
-Relevance is the capacity of the financial information to influence the decision of its users. The ingredients of relevance are the predictive value and confirmatory value. Materiality is a sub-quality of relevance.
+*Bahtera* means an ark: a great vessel built to carry what matters through a flood. The word travelled into Malay and Indonesian from Sanskrit (*vahitra* / *bahitra*, “vessel” or “boat”) and is still widely understood across Southeast Asia, where it appears in everyday speech and in the story of Noah’s Ark, *Bahtera Nuh*.
 
-> The ingredients of relevance are the predictive value and confirmatory value.
+That is the picture we have in mind. When the supply of money keeps expanding, savings can be diluted like land under rising water. An ark does not stop the rain; it gives people and their work a sound vessel to stay afloat. We help organisations understand Bitcoin and build that vessel deliberately, with clear policy, careful custody and named owners, before the water rises.
 
-Information is considered material if its omission or misstatement could influence the economic decisions of users taken on the basis of the financial statements.
+## Understanding comes first
 
-## Faithful Representation
+A treasury programme starts with a shared understanding of its purpose. We begin by listening to your team's questions, identifying the decisions ahead, and making space for a clear discussion of responsibilities and constraints.
 
-Faithful representation means that the actual effects of the transactions shall be properly accounted for and reported in the financial statements. The words and numbers must match what really happened in the transaction. The ingredients of faithful representation are completeness, neutrality and free from error.
+From there, we help translate that discussion into an implementation plan with defined owners and review points.
 
-## Enhancing Qualitative Characteristics
+## How we work
 
-### Verifiability
+1. **Learn together.** Build a common vocabulary through executive education and team discussion.
+2. **Define the brief.** Clarify objectives, stakeholders, scope, and the questions that need specialist input.
+3. **Design the approach.** Connect treasury policy with custody, operational workflows, and reporting requirements.
+4. **Prepare the handover.** Document responsibilities and the next steps your team will own.
 
-Verifiability implies consensus between the different knowledgeable and independent users of financial information. Such information must be supported by sufficient evidence to follow the principle of objectivity.
+## People behind the work
 
-### Comparability
+Ricky Saif brings a background in corporate education. Faizal Abdillah contributes experience from the banking sector. Banitama brings software development experience and a longstanding interest in Bitcoin.
 
-Comparability is the uniform application of accounting methods across entities in the same industry. The principle of consistency is under comparability. Consistency is the uniform application of accounting across points in time within an entity.
+[Meet the team]({{ '/team/' | relative_url }}) and learn more about the people behind Bahtera.
 
-### Understandability
-
-Understandability means that accounting reports should be expressed as clearly as possible and should be understood by those to whom the information is relevant.
-Timeliness: Timeliness implies that financial information must be presented to the users before a decision is to be made.
-
----
-
-## Statement of cash flows
-
-The statement of cash flows considers the inputs and outputs in concrete cash within a stated period. The general template of a cash flow statement is as follows: Cash Inflow - Cash Outflow + Opening Balance = Closing Balance
-
-| Cash Inflow | Outflow   | Opening Balance |
-| ----------- | --------- | --------------- |
-| _Monday_    | `Tuesday` | **Wednesday**   |
-| 1           | 2         | 3               |
-
-**Example 1:** in the beginning of September, Ellen started out with $5 in her bank account. During that same month, Ellen borrowed $20 from Tom. At the end of the month, Ellen bought a pair of shoes for $7. Ellen's cash flow statement for the month of September looks like this:
-
-- Cash inflow: $20
-- Cash outflow:$7
-- Opening balance: $5
-- Closing balance: $20 – $7 + $5 = $18
-
-**Example 2:** in the beginning of June, WikiTables, a company that buys and resells tables, sold 2 tables. They'd originally bought the tables for $25 each, and sold them at a price of $50 per table. The first table was paid out in cash however the second one was bought in credit terms. WikiTables' cash flow statement for the month of June looks like this:
-
-> **Important:** the cash flow statement only considers the exchange of actual cash, and ignores what the person in question owes or is owed.
-
-## Statement of financial position (balance sheet)
-
-The balance sheet is the financial statement showing a firm's assets, liabilities and equity (capital) at a set point in time, usually the end of the fiscal year reported on the accompanying income statement.
-
-- **fixed assets**
-  - property
-  - building
-  - equipment (such as factory machinery)
-- **intangible assets**
-  - copyrights
-  - trademarks
-  - patents
-    - pending
-    - international
-- goodwill
-
-Owner's equity, sometimes referred to as net assets, is represented differently depending on the type of business ownership. Business ownership can be in the form of a sole proprietorship, partnership, or a corporation. For a corporation, the owner's equity portion usually shows common stock, and retained earnings (earnings kept in the company). Retained earnings come from the retained earnings statement, prepared prior to the balance sheet.

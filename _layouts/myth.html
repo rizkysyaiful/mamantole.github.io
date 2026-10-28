@@ -1,15 +1,12 @@
 ---
 layout: default
-bodyClass: "page-myth"
+bodyClass: page-myth
 ---
-
-<div class="container pb-10 pt-10 pt-md-10 pb-md-10">
-  <div class="row justify-content-start">
-    <div class="col-12 col-md-8">
-      <div class="myth myth-single">
-        <h1 class="title">{{page.title}}</h1>
-        <div class="content">{{content}}</div>
-      </div>
-    </div>
-  </div>
-</div>
+<header class="page-heading container"><a class="eyebrow" href="{{ '/myths/' | relative_url }}">&larr; All myths</a><p class="post-meta">Myth {{ page.weight }} &middot; {{ page.reading_time }} min read</p><h1>{{ page.title }}</h1>{% include byline.html author=page.author reviewer=page.reviewer updated=page.last_modified_at %}</header>
+{% include example-banner.html %}
+{% if page.thumbnail %}<figure class="article-hero"><img src="{{ page.thumbnail | relative_url }}" alt="{{ page.thumbnail_alt | default: page.title }}" width="1200" height="675"></figure>{% endif %}
+<div class="container"><div class="answer-box"><span class="eyebrow">The short answer</span><p>{{ page.description }}</p></div></div>
+<article class="container content article-prose">{{ content }}</article>
+{% assign guide = site.guides | where: 'slug', page.related_guide | first %}
+<aside class="container related-posts"><span class="eyebrow">Go deeper</span><div class="card-grid">{% if guide %}<a class="profile-card" href="{{ guide.url | relative_url }}"><span class="eyebrow">Guide</span><h2>{{ guide.title }}</h2><span>Read the guide &rarr;</span></a>{% endif %}<a class="profile-card" href="{{ site.data.contact.booking_url }}" target="_blank" rel="noopener noreferrer"><span class="eyebrow">Talk to us</span><h2>Book a free 15-minute introduction call</h2><span>Open booking &rarr;</span></a></div></aside>
+{% include section-cta.html %}

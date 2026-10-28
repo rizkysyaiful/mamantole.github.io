@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Custody options: multisig vs custodian | Bahtera</title>
+<meta name="description" content="How your company holds Bitcoin matters more than what it holds. This guide compares self-custody with shared approvals and regulated custodians, and helps you choose for your risk level.">
+<link rel="canonical" href="https://rizkysyaiful.github.io/guides/custody-options/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="Bahtera">
+<meta name="theme-color" content="#172B4D">
+<link rel="alternate" type="application/atom+xml" title="Bahtera blog" href="/feed.xml">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="apple-touch-icon" href="/images/logo/logo-square.png">
+
+<meta property="og:site_name" content="Bahtera">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Custody options: multisig vs custodian">
+<meta property="og:description" content="How your company holds Bitcoin matters more than what it holds. This guide compares self-custody with shared approvals and regulated custodians, and helps you choose for your risk level.">
+<meta property="og:url" content="https://rizkysyaiful.github.io/guides/custody-options/">
+<meta property="og:image" content="https://rizkysyaiful.github.io/images/og-image.png">
+<meta property="og:image:alt" content="Bahtera – Institution-Level Bitcoin Consultancy.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Custody options: multisig vs custodian">
+<meta name="twitter:description" content="How your company holds Bitcoin matters more than what it holds. This guide compares self-custody with shared approvals and regulated custodians, and helps you choose for your risk level.">
+<meta name="twitter:image" content="https://rizkysyaiful.github.io/images/og-image.png"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://rizkysyaiful.github.io/#organization",
+      "name": "Bahtera",
+      "url": "https://rizkysyaiful.github.io/",
+      "slogan": "Institution-Level Bitcoin Consultancy.",
+      "description": "Bahtera is a Bitcoin treasury consultancy for companies and leaders across Asia, including Indonesia, Malaysia, Singapore, India and the Philippines, offering executive education, treasury policy, custody architecture, tax coordination and audit-ready reporting.",
+      "logo": { "@type": "ImageObject", "url": "https://rizkysyaiful.github.io/images/logo/logo-square.png", "width": 512, "height": 512 },
+      "image": "https://rizkysyaiful.github.io/images/og-image.png",
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }],
+      "knowsAbout": ["Bitcoin","Bitcoin treasury","Corporate treasury management","Treasury policy design","Bitcoin custody (multisig and cold storage)","Bitcoin accounting and audit","Executive Bitcoin education"],
+      "employee": [{ "@id": "https://rizkysyaiful.github.io/team/ricky/#person" }, { "@id": "https://rizkysyaiful.github.io/team/faizal/#person" }, { "@id": "https://rizkysyaiful.github.io/team/banitama/#person" }, { "@id": "https://rizkysyaiful.github.io/team/dimas/#person" }, { "@id": "https://rizkysyaiful.github.io/team/arjun-mehta/#person" }, { "@id": "https://rizkysyaiful.github.io/team/maria-santos/#person" }, { "@id": "https://rizkysyaiful.github.io/team/lim-wei-jie/#person" }, { "@id": "https://rizkysyaiful.github.io/team/tan-mei-ling/#person" }],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Bitcoin treasury services",
+        "itemListElement": [{ "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/policy_design/#service" } }, { "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/custody_architecture/#service" } }, { "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/accounting_audit/#service" } }, { "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/regulatory_guidance/#service" } }]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/policy_design/#service",
+      "name": "Treasury Policy Design",
+      "serviceType": "Treasury Policy Design",
+      "description": "A documented framework for treasury decisions, responsibilities, and internal review.",
+      "url": "https://rizkysyaiful.github.io/services/policy_design/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/custody_architecture/#service",
+      "name": "Custody Architecture",
+      "serviceType": "Custody Architecture",
+      "description": "Custody planning that connects technical design with everyday responsibilities.",
+      "url": "https://rizkysyaiful.github.io/services/custody_architecture/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/accounting_audit/#service",
+      "name": "Accounting & Audit Support",
+      "serviceType": "Accounting & Audit Support",
+      "description": "Operational records and reporting workflows designed for review with your finance team.",
+      "url": "https://rizkysyaiful.github.io/services/accounting_audit/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/regulatory_guidance/#service",
+      "name": "Regulatory & Tax Guidance",
+      "serviceType": "Regulatory & Tax Guidance",
+      "description": "A structured way to identify questions and coordinate with your legal and tax advisers.",
+      "url": "https://rizkysyaiful.github.io/services/regulatory_guidance/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/ricky/#person",
+      "name": "Ricky Saif",
+      "jobTitle": "Corporate education",
+      "description": "Ricky Saif has educated corporations since 2013, focusing today on exposing The Fiat Flood crisis – where inflation silently drains cash reserves while traditional assets fail. Ricky empowers pragmatic leaders to adopt Bitcoin treasuries as an inflation-proof solution. He works exclusively with e...",
+      "url": "https://rizkysyaiful.github.io/team/ricky/",
+      "image": "https://rizkysyaiful.github.io/images/team/ricky.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/faizal/#person",
+      "name": "Faizal Abdillah",
+      "jobTitle": "Banking background",
+      "description": "Faizal Abdillah professional journey began in the banking sector, where he gained firsthand insight into traditional finance. The discovery of Bitcoin—a technology with the potential to render banks obsolete—sparked a deep curiosity. As he delved further, he came to believe that many societal iss...",
+      "url": "https://rizkysyaiful.github.io/team/faizal/",
+      "image": "https://rizkysyaiful.github.io/images/team/faizal.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/banitama/#person",
+      "name": "Banitama",
+      "jobTitle": "Software development",
+      "description": "Banitama is a software developer and Bitcoin advocate who began using BTC in 2014—initially unaware of its revolutionary potential until discovering The Bitcoin Standard in 2018, which unlocked his deep dive into monetary history and economics. Now based in Sweden (home of the world’s first centr...",
+      "url": "https://rizkysyaiful.github.io/team/banitama/",
+      "image": "https://rizkysyaiful.github.io/images/team/banitama.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/dimas/#person",
+      "name": "Dimas",
+      "jobTitle": "Regional partner, Indonesia",
+      "description": "Dimas is Bahtera’s partner in Indonesia. He is a co-founder of Bitcoin Indonesia and of Bitcoin House Bali, and hosts the Bitcoin Indonesia Podcast. Based in Bandung, he is a long-time Bitcoin educator and community builder. With Bahtera he brings executive education and treasury policy discussio...",
+      "url": "https://rizkysyaiful.github.io/team/dimas/",
+      "image": "https://rizkysyaiful.github.io/images/team/dimas.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/arjun-mehta/#person",
+      "name": "Arjun Mehta",
+      "jobTitle": "Regional partner, India",
+      "description": "Arjun Mehta is a placeholder profile for Bahtera’s regional partner in India. He will support Indian companies and family offices with executive education, treasury policy discussions and coordination with local tax and accounting advisers. This page is a dummy profile and will be replaced with t...",
+      "url": "https://rizkysyaiful.github.io/team/arjun-mehta/",
+      "image": "https://rizkysyaiful.github.io/images/team/arjun-mehta.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/maria-santos/#person",
+      "name": "Maria Santos",
+      "jobTitle": "Regional partner, Philippines",
+      "description": "Maria Santos is a placeholder profile for Bahtera’s regional partner in the Philippines. She will help Filipino businesses and leaders explore Bitcoin treasury through executive education and practical, locally-aware implementation support. This page is a dummy profile and will be replaced with t...",
+      "url": "https://rizkysyaiful.github.io/team/maria-santos/",
+      "image": "https://rizkysyaiful.github.io/images/team/maria-santos.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/lim-wei-jie/#person",
+      "name": "Lim Wei Jie",
+      "jobTitle": "Regional partner, Malaysia",
+      "description": "Lim Wei Jie is a placeholder profile for Bahtera’s regional partner in Malaysia. He will work with Malaysian companies on treasury education, policy design and the operational readiness of their finance teams. This page is a dummy profile and will be replaced with the partner’s real background on...",
+      "url": "https://rizkysyaiful.github.io/team/lim-wei-jie/",
+      "image": "https://rizkysyaiful.github.io/images/team/lim-wei-jie.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/tan-mei-ling/#person",
+      "name": "Tan Mei Ling",
+      "jobTitle": "Regional partner, Singapore",
+      "description": "Tan Mei Ling is a placeholder profile for Bahtera’s regional partner in Singapore. She will support Singapore-based institutions with custody architecture discussions and audit-ready reporting conversations. This page is a dummy profile and will be replaced with the partner’s real background once...",
+      "url": "https://rizkysyaiful.github.io/team/tan-mei-ling/",
+      "image": "https://rizkysyaiful.github.io/images/team/tan-mei-ling.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://rizkysyaiful.github.io/#website",
+      "url": "https://rizkysyaiful.github.io/",
+      "name": "Bahtera",
+      "description": "Bahtera is a Bitcoin treasury consultancy for companies and leaders across Asia, including Indonesia, Malaysia, Singapore, India and the Philippines, offering executive education, treasury policy, custody architecture, tax coordination and audit-ready reporting.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://rizkysyaiful.github.io/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://rizkysyaiful.github.io/guides/custody-options/#webpage",
+      "url": "https://rizkysyaiful.github.io/guides/custody-options/",
+      "name": "Custody options: multisig vs custodian | Bahtera",
+      "description": "How your company holds Bitcoin matters more than what it holds. This guide compares self-custody with shared approvals and regulated custodians, and helps you choose for your risk level.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://rizkysyaiful.github.io/#website" },
+      "about": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "primaryImageOfPage": { "@type": "ImageObject", "url": "https://rizkysyaiful.github.io/images/og-image.png" },
+      "dateModified": "2026-10-29T00:00:00+07:00",
+      "breadcrumb": { "@id": "https://rizkysyaiful.github.io/guides/custody-options/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rizkysyaiful.github.io/guides/custody-options/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rizkysyaiful.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://rizkysyaiful.github.io/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "Custody options: multisig vs custodian", "item": "https://rizkysyaiful.github.io/guides/custody-options/" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://rizkysyaiful.github.io/guides/custody-options/#article",
+      "headline": "Custody options: multisig vs custodian",
+      "description": "How your company holds Bitcoin matters more than what it holds. This guide compares self-custody with shared approvals and regulated custodians, and helps you choose for your risk level.",
+      "url": "https://rizkysyaiful.github.io/guides/custody-options/",
+      "mainEntityOfPage": { "@id": "https://rizkysyaiful.github.io/guides/custody-options/#webpage" },
+      "dateModified": "2026-10-29T00:00:00+07:00",
+      "wordCount": 773,
+      "inLanguage": "en",
+      "author": { "@id": "https://rizkysyaiful.github.io/team/banitama/#person" },
+      "publisher": { "@id": "https://rizkysyaiful.github.io/#organization" }
+    }
+  ]
+}
+</script>
+
+  <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon-64x64.png?v=5">
+  <!-- Google Fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Self host font -->
+  <!-- <link rel="preload" href="/assets/fonts/playfair-display.woff2" as="font" type="font/woff2" crossorigin> -->
+  <link href="/assets/css/style.css?v=20261029001038" rel="stylesheet">
+</head>
+
+<body class='page page-guide'>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <nav aria-label="Mobile navigation" id="main-menu-mobile" class="main-menu-mobile">
+  
+  <ul>
+    
+    
+    <li class="">
+      <a href="/about/" >About</a>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/services/" >Services</a>
+    </li>
+    
+    
+    
+    <li class="has-sub"><span class="sub-label">Thoughts</span>
+      <ul class="sub-list">
+        
+        <li class=""><a href="/myths/" >1. Myth Busting</a></li>
+        
+        <li class="active"><a href="/guides/" aria-current="page">2. Guides</a></li>
+        
+        <li class=""><a href="/blog/" >3. News</a></li>
+        
+      </ul>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/team/" >Team</a>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/contact/" >Contact</a>
+    </li>
+    
+    
+  </ul>
+</nav>
+
+  <div id="wrapper" class="wrapper">
+    <div class='header fixed-top'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height="46px" alt="Bahtera" src="/images/logo/logo.png?v=5" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height="40px" alt="Bahtera" src="/images/logo/logo-mobile.png?v=5" /></a>
+    </div>
+    <nav aria-label="Main navigation" id="main-menu" class="main-menu">
+  
+  <ul>
+    
+    
+    <li class="">
+      <a href="/about/" >About</a>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/services/" >Services</a>
+    </li>
+    
+    
+    
+    
+    
+    <li class="has-sub active">
+      <button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="sub-thoughts">Thoughts<span class="caret" aria-hidden="true"></span></button>
+      <ul class="sub-menu" id="sub-thoughts">
+        
+        <li class=""><a href="/myths/" >1. Myth Busting</a></li>
+        
+        <li class="active"><a href="/guides/" aria-current="page">2. Guides</a></li>
+        
+        <li class=""><a href="/blog/" >3. News</a></li>
+        
+      </ul>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/team/" >Team</a>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/contact/" >Contact</a>
+    </li>
+    
+    
+  </ul>
+</nav>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Open menu" aria-controls="main-menu-mobile" aria-expanded="false">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    <main id="main-content" tabindex="-1"><header class="page-heading container"><a class="eyebrow" href="/guides/">&larr; All guides</a><p class="post-meta">Guide 5 &middot; 8 min read</p><h1>Custody options: multisig vs custodian</h1><p class="lead">How your company holds Bitcoin matters more than what it holds. This guide compares self-custody with shared approvals and regulated custodians, and helps you choose for your risk level.</p><p class="post-meta author-line">By <a href="/team/banitama/">Banitama</a> &middot; Reviewed by <a href="/team/faizal/">Faizal Abdillah</a> &middot; Updated <time datetime="2026-10-29T00:00:00+07:00">October 29, 2026</time></p>
+</header>
+
+
+<figure class="article-hero"><img src="/images/thumbs/custody-options.png" alt="A vault door with a gold dial" width="1200" height="675"></figure>
+<article class="container content article-prose"><p>Most losses in Bitcoin trace back to custody, not to the network. Who holds the keys, and under what rules, is the central operational decision of a Bitcoin treasury.</p>
+
+<p>This guide compares the options. Custody is not a product you buy. It is a set of decisions you make and then prove.</p>
+
+<h2 id="who-this-is-for">Who this is for</h2>
+
+<p>CFOs, IT and security leads and anyone who will be responsible for how the company’s Bitcoin is held.</p>
+
+<h2 id="the-core-idea">The core idea</h2>
+
+<p>Bitcoin is controlled by private keys. Whoever can use the keys controls the funds. Custody design is therefore about answering three questions: who holds the keys, how many must agree before funds move, and what happens when something goes wrong.</p>
+
+<h2 id="the-three-main-models">The three main models</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>How it works</th>
+      <th>Strengths</th>
+      <th>Weaknesses</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Single key, self-held</td>
+      <td>One person or device holds the key</td>
+      <td>Simple</td>
+      <td>One loss or theft ends the treasury. Not suitable for a company</td>
+    </tr>
+    <tr>
+      <td>Multi-signature self-custody</td>
+      <td>Several keys held by different people and places, with a threshold such as 3 of 5 needed to move funds</td>
+      <td>No single point of failure, no third-party dependency</td>
+      <td>Needs procedures, training and regular drills</td>
+    </tr>
+    <tr>
+      <td>Regulated custodian</td>
+      <td>A licensed provider holds the assets on your behalf</td>
+      <td>Professional security, insurance options, audit reports</td>
+      <td>You depend on the provider, and their failure or legal problems become yours</td>
+    </tr>
+  </tbody>
+</table>
+
+<figure><img src="/images/figures/custody-options-1.svg" alt="Single key, multisig self-custody and regulated custodian, arranged from more control and more work for you to less work and more reliance on others." loading="lazy" /><figcaption>The trade-off is control against operational burden. Neither end is free.</figcaption></figure>
+
+<p>Many companies use a hybrid, for example a custodian that holds some of the keys in a shared-approval arrangement, so that neither the company nor the provider can act alone.</p>
+
+<h2 id="how-to-choose">How to choose</h2>
+
+<p>Ask these questions in order:</p>
+
+<ol>
+  <li><strong>How much are we holding relative to our reserves?</strong> Larger amounts justify more professional arrangements.</li>
+  <li><strong>Do we have people who can run key procedures reliably?</strong> If not, a custodian reduces operational risk.</li>
+  <li><strong>What do our auditors, insurers and regulators expect?</strong> Some require a regulated custodian.</li>
+  <li><strong>How will we recover if people leave or devices fail?</strong> The answer must be written and tested.</li>
+  <li><strong>What would a custodian failure cost us?</strong> Check their licensing, reserves, insurance and legal structure, and what happens to your assets in insolvency.</li>
+</ol>
+
+<h2 id="setting-up-multi-signature-custody">Setting up multi-signature custody</h2>
+
+<ol>
+  <li>Decide the threshold and the number of keys, for example three of five.</li>
+  <li>Assign keys to different people in different locations, ideally on different types of hardware.</li>
+  <li>Write the approval procedure, including who proposes, who approves and what is verified before signing.</li>
+  <li>Make backups of each key, store them offline in separate places and record where they are.</li>
+  <li>Run a recovery drill: move a small amount, restore from backups and confirm it works.</li>
+  <li>Plan for succession: who takes over each role, and how keys are rotated when someone leaves.</li>
+</ol>
+
+<figure><img src="/images/figures/custody-options-2.svg" alt="Five recovery drill steps: move a small amount, wipe a signer, restore from backup, sign again and record the result." loading="lazy" /><figcaption>The recovery drill. A backup you have not restored is a belief, not a backup.</figcaption></figure>
+
+<h2 id="buying-the-devices">Buying the devices</h2>
+
+<p>Self-custody starts before the first transaction. The attack often happens before the box reaches you.</p>
+
+<ul>
+  <li><strong>Buy from the manufacturer</strong> or a reseller the manufacturer lists. Every extra hop is a stranger.</li>
+  <li><strong>Treat packaging as a filter, not proof.</strong> Seals can be restored.</li>
+  <li><strong>Never accept a device that arrives with a seed phrase,</strong> or asks you to import one.</li>
+  <li><strong>Generate the seed yourself,</strong> on the device, in private.</li>
+  <li><strong>Spread vendors.</strong> Keys on devices from different makers mean no single supply chain decides the outcome.</li>
+</ul>
+
+<p>The full list is in <a href="https://banitama.my.id/insights/hardware-wallet-supply-chain-safety">Hardware wallet supply-chain safety</a>. A recent tampering case is covered in <a href="https://banitama.my.id/insights/ledger-reseller-attack">The Ledger reseller attack</a>.</p>
+
+<h2 id="choosing-a-custodian">Choosing a custodian</h2>
+
+<p>If you use a regulated custodian, ask in writing:</p>
+
+<ol>
+  <li>Which licence do they hold, and from which regulator?</li>
+  <li>How are client assets held and separated from the firm’s?</li>
+  <li>What happens to your assets if the firm fails?</li>
+  <li>What insurance exists, and what does it actually cover?</li>
+  <li>Which independent reports can you read?</li>
+</ol>
+
+<h2 id="common-mistakes">Common mistakes</h2>
+
+<ul>
+  <li>Leaving funds on a trading platform.</li>
+  <li>Keeping all backups in one location.</li>
+  <li>Never testing recovery.</li>
+  <li>No plan for when a key-holder resigns.</li>
+  <li>Choosing a custodian without checking licensing, insurance and insolvency treatment.</li>
+  <li>Buying a device from a marketplace seller of unknown origin.</li>
+</ul>
+
+<h2 id="checklist">Checklist</h2>
+
+<ul>
+  <li>Custody model chosen and documented</li>
+  <li>Keys held by different people in different places</li>
+  <li>Approval procedure written</li>
+  <li>Backups made and verified</li>
+  <li>Recovery drill completed</li>
+  <li>Succession plan for each key-holder</li>
+</ul>
+
+<h2 id="the-bottom-line">The bottom line</h2>
+
+<p>Custody is not a product you buy so much as a chain you accept. Every link you remove, verify or test is one an attacker cannot use.</p>
+
+<p>Pick the model that fits your people and your size. Then write it down and run the drill.</p>
+
+<p>Legal and tax questions about custody, such as who legally holds the asset, stay with your own qualified advisers.</p>
+
+<h2 id="sources">Sources</h2>
+
+<ul>
+  <li><a href="https://en.bitcoin.it/wiki/Multisignature">Multisignature, Bitcoin Wiki</a></li>
+  <li><a href="https://banitama.my.id/insights/hardware-wallet-supply-chain-safety">Hardware wallet supply-chain safety, Banitama</a></li>
+  <li><a href="https://banitama.my.id/insights/ledger-reseller-attack">The Ledger reseller attack, Banitama</a></li>
+</ul>
+</article>
+
+<aside class="container related-posts"><span class="eyebrow">Related myths</span><div class="card-grid"><a class="profile-card" href="/myths/gold-is-the-safer-hedge/"><span class="eyebrow">Myth 5</span><h2>"Gold is the safer hedge."</h2><span>Read our answer &rarr;</span></a><a class="profile-card" href="/myths/bitcoin-gets-hacked/"><span class="eyebrow">Myth 8</span><h2>"Bitcoin gets hacked."</h2><span>Read our answer &rarr;</span></a><a class="profile-card" href="/myths/lose-the-keys-gone/"><span class="eyebrow">Myth 9</span><h2>"If we lose the keys, it's gone."</h2><span>Read our answer &rarr;</span></a></div></aside>
+<p class="container small-note disclaimer">This guide is educational. Legal, tax and accounting conclusions stay with your own qualified advisers.</p>
+<aside class="section-cta container">
+  <div><span class="eyebrow">Start with a conversation</span><h2>Bring clarity to your next step.</h2><p>Explore the right education and implementation support for your team.</p></div>
+  <a class="button" href="/contact/">Discuss your needs <span aria-hidden="true">&rarr;</span></a>
+</aside>
+
+</main>
+  </div>
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <div class="logo-footer">
+            <a href="/"><img height="43px" alt="Bahtera" src="/images/logo/logo-footer.png?v=5" /></a>
+            <p class="brand-tagline">Institution-Level Bitcoin Consultancy.</p>
+            <p class="brand-regions">Indonesia &middot; Malaysia &middot; Singapore &middot; India &middot; Philippines</p>
+          </div>
+          <ul>
+            
+            
+            <li class="">
+              <a href="/guides/">Guides</a>
+            </li>
+            
+            <li class="">
+              <a href="/myths/">Myth Busting</a>
+            </li>
+            
+            <li class="">
+              <a href="/blog/">News</a>
+            </li>
+            
+            <li class="">
+              <a href="/contact/">Contact</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            <div class="social">
+  
+</div>
+
+          
+          
+          <div class="copyright">&copy; 2026 PT. Bahtera Tujuan Cemerlang. All rights reserved.</div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script type="text/javascript" src="/assets/js/scripts.js?v=20261029001038"></script>
+  
+</body>
+</html>

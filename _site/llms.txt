@@ -1,0 +1,70 @@
+# Bahtera
+
+> Bahtera is a Bitcoin treasury consultancy for companies and leaders across Asia, including Indonesia, Malaysia, Singapore, India and the Philippines, offering executive education, treasury policy, custody architecture, tax coordination and audit-ready reporting.
+
+Key facts:
+
+- Name: Bahtera (Institution-Level Bitcoin Consultancy)
+- What it does: helps companies, boards and leaders explore and implement a Bitcoin treasury, from executive education to treasury policy, custody architecture, regulatory/tax coordination and accounting/audit support.
+- Where: Indonesia, Malaysia, Singapore, India, Philippines, with a founding team and local regional partners.
+- Team: Ricky Saif (corporate education), Faizal Abdillah (banking background), Banitama (software development). The team has used Bitcoin since 2013 and accumulated it since 2017.
+- Approach: education first, then a documented brief, policy and custody design, and a handover with named owners. Legal and tax conclusions stay with the client's own qualified advisers.
+- Website: https://rizkysyaiful.github.io/
+
+## Main pages
+
+- [Home](https://rizkysyaiful.github.io/): why companies are considering a Bitcoin treasury and how Bahtera's implementation process works
+- [About](https://rizkysyaiful.github.io/about/): Meet Bahtera, a team bringing together education, banking experience, and software development to support Bitcoin treasury implementation.
+- [Services](https://rizkysyaiful.github.io/services/): Bitcoin treasury education and implementation support, covering policy design, custody architecture, regulatory coordination, and reporting.
+- [Team](https://rizkysyaiful.github.io/team/): Meet the educators and practitioners behind Bahtera.
+- [Contact](https://rizkysyaiful.github.io/contact/): Prepare a conversation with Bahtera about company treasury, executive education, or executive education.
+
+## Services
+
+- [Treasury Policy Design](https://rizkysyaiful.github.io/services/policy_design/): A documented framework for treasury decisions, responsibilities, and internal review.
+- [Custody Architecture](https://rizkysyaiful.github.io/services/custody_architecture/): Custody planning that connects technical design with everyday responsibilities.
+- [Accounting & Audit Support](https://rizkysyaiful.github.io/services/accounting_audit/): Operational records and reporting workflows designed for review with your finance team.
+- [Regulatory & Tax Guidance](https://rizkysyaiful.github.io/services/regulatory_guidance/): A structured way to identify questions and coordinate with your legal and tax advisers.
+
+## Team
+
+- [Ricky Saif](https://rizkysyaiful.github.io/team/ricky/): Corporate education
+- [Faizal Abdillah](https://rizkysyaiful.github.io/team/faizal/): Banking background
+- [Banitama](https://rizkysyaiful.github.io/team/banitama/): Software development
+- [Dimas](https://rizkysyaiful.github.io/team/dimas/): Regional partner, Indonesia (regional partner, Indonesia)
+- [Arjun Mehta](https://rizkysyaiful.github.io/team/arjun-mehta/): Regional partner, India (regional partner, India)
+- [Maria Santos](https://rizkysyaiful.github.io/team/maria-santos/): Regional partner, Philippines (regional partner, Philippines)
+- [Lim Wei Jie](https://rizkysyaiful.github.io/team/lim-wei-jie/): Regional partner, Malaysia (regional partner, Malaysia)
+- [Tan Mei Ling](https://rizkysyaiful.github.io/team/tan-mei-ling/): Regional partner, Singapore (regional partner, Singapore)
+
+## Guides
+
+- [Bitcoin treasury policy: what to put in it](https://rizkysyaiful.github.io/guides/treasury-policy/): A one-page policy your board can read in five minutes: purpose, allocation limits, buying method, custody, approvals, reporting and review. This guide shows what each section covers and what to decide.
+- [Accounting and audit for Bitcoin holdings](https://rizkysyaiful.github.io/guides/accounting-and-audit/): What your auditor will ask and what evidence to prepare: control, existence, valuation, accounting treatment and disclosure. A practical guide that leaves conclusions to your auditor.
+- [Getting board approval: a checklist](https://rizkysyaiful.github.io/guides/board-approval/): Prepare the questions, risks and decision paper a board expects. Five stages, each ending with something written, so approval becomes a normal governance step.
+- [Running a leadership education session](https://rizkysyaiful.github.io/guides/leadership-session/): Plan a 90-minute session that ends with next steps and named owners. A practical agenda for leaders who need to understand the problem before they decide anything.
+- [Custody options: multisig vs custodian](https://rizkysyaiful.github.io/guides/custody-options/): How your company holds Bitcoin matters more than what it holds. This guide compares self-custody with shared approvals and regulated custodians, and helps you choose for your risk level.
+
+## Myth busting: how we respond to common Bitcoin myths
+
+- ["It's too late; Bitcoin is a bubble."](https://rizkysyaiful.github.io/myths/too-late-bubble/): Nobody can say whether today's price is too high, and a company does not need to. The useful question is what role a small, capped position plays, and what waiting costs.
+- ["Inflation is under control; our cash is fine."](https://rizkysyaiful.github.io/myths/inflation-under-control/): Cash that sits still loses purchasing power even when inflation is low and stable. The balance looks the same; what it buys does not. A policy decides how much idle cash is worth protecting.
+- ["Our board will never approve this."](https://rizkysyaiful.github.io/myths/board-will-never-approve/): Boards approve clear policy, defined limits and named owners, not enthusiasm. If every question a director might ask has a written answer, the proposal becomes ordinary governance.
+- ["It's too volatile for a company treasury."](https://rizkysyaiful.github.io/myths/too-volatile-for-treasury/): Volatility is real, and it is a reason to size the position, not to ignore the asset. The sensible response is a capped allocation, a long time horizon and written limits.
+- ["Gold is the safer hedge."](https://rizkysyaiful.github.io/myths/gold-is-the-safer-hedge/): Gold has the longer record. Bitcoin has a fixed supply schedule and easy verification. They differ on supply, portability, verification and custody, so compare them property by property.
+- ["We can't audit or account for it."](https://rizkysyaiful.github.io/myths/cannot-audit-or-account/): Companies already account for and audit Bitcoin. The real questions are valuation, custody evidence and disclosure, and your auditor answers them under the standards that apply to you.
+- ["Regulators won't allow companies to hold it."](https://rizkysyaiful.github.io/myths/regulators-will-not-allow/): Rules differ by country and they change. The useful step is a checklist for your own lawyer, not a yes or no from anyone who does not know your jurisdiction.
+- ["Bitcoin gets hacked."](https://rizkysyaiful.github.io/myths/bitcoin-gets-hacked/): The network and the places people keep Bitcoin are different risks. Most headline losses come from exchanges, devices and bad process, not from the protocol. Custody design is the answer.
+- ["If we lose the keys, it's gone."](https://rizkysyaiful.github.io/myths/lose-the-keys-gone/): True when one person holds one key. A signing quorum, tested backups and written roles make a single loss survivable. The process matters more than the tool.
+- ["Bitcoin wastes energy."](https://rizkysyaiful.github.io/myths/bitcoin-wastes-energy/): Mining converts electricity into a cost that protects the ledger. Whether that is worth it is a fair debate. Use measured data and the sources of energy, not slogans.
+
+## News
+
+- [Before the treasury conversation, write the brief.](https://rizkysyaiful.github.io/blog/preparing-the-treasury-conversation/): A useful internal discussion starts with a shared question, a clear purpose, and the right people in the room.
+- [Make room for better questions.](https://rizkysyaiful.github.io/blog/planning-a-team-workshop/): A practical structure for a team learning session that ends with useful next steps.
+- [A process is only as clear as its handover.](https://rizkysyaiful.github.io/blog/documenting-operational-responsibilities/): How a simple responsibility map can make implementation discussions more concrete.
+
+## Optional
+
+- [Atom feed](https://rizkysyaiful.github.io/feed.xml)
+- [Sitemap](https://rizkysyaiful.github.io/sitemap.xml)

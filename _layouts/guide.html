@@ -1,0 +1,12 @@
+---
+layout: default
+bodyClass: page-guide
+---
+<header class="page-heading container"><a class="eyebrow" href="{{ '/guides/' | relative_url }}">&larr; All guides</a><p class="post-meta">Guide {{ page.weight }} &middot; {{ page.reading_time }} min read</p><h1>{{ page.title }}</h1><p class="lead">{{ page.description }}</p>{% include byline.html author=page.author reviewer=page.reviewer updated=page.last_modified_at %}</header>
+{% include example-banner.html %}
+{% if page.thumbnail %}<figure class="article-hero"><img src="{{ page.thumbnail | relative_url }}" alt="{{ page.thumbnail_alt | default: page.title }}" width="1200" height="675"></figure>{% endif %}
+<article class="container content article-prose">{{ content }}</article>
+{% assign related = site.myths | where: 'related_guide', page.slug | sort: 'weight' %}
+{% if related.size > 0 %}<aside class="container related-posts"><span class="eyebrow">Related myths</span><div class="card-grid">{% for m in related %}<a class="profile-card" href="{{ m.url | relative_url }}"><span class="eyebrow">Myth {{ m.weight }}</span><h2>{{ m.title }}</h2><span>Read our answer &rarr;</span></a>{% endfor %}</div></aside>{% endif %}
+<p class="container small-note disclaimer">This guide is educational. Legal, tax and accounting conclusions stay with your own qualified advisers.</p>
+{% include section-cta.html %}

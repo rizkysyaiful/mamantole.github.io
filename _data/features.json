@@ -4,23 +4,11 @@
     "description": "Let’s build your company’s Bitcoin strategy with confidence. Your future treasury starts here.",
     "cta": {
       "class": "primary",
-      "text": "Book a free 1 hour in-house training",
+      "text": "Book a free 15-minute introduction call",
       "url": "/contact"
     },
     "image": {
       "url": "images/features/company_treasury.svg"
-    }
-  },
-  {
-    "title": "Individual Treasury",
-    "description": "Take the first step toward securing your personal or family wealth with Bitcoin—it’s easier than you think.",
-    "cta": {
-      "class": "secondary",
-      "text": "Try individual Training",
-      "url": "/contact"
-    },
-    "image": {
-      "url": "images/features/individual_treasury.svg"
     }
   }
 ]

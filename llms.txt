@@ -1,0 +1,50 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+# {{ site.title }}
+
+> {{ site.description }}
+
+Key facts:
+
+- Name: {{ site.title }} ({{ site.tagline | remove: '.' }})
+- What it does: helps companies, boards and leaders explore and implement a Bitcoin treasury, from executive education to treasury policy, custody architecture, regulatory/tax coordination and accounting/audit support.
+- Where: {{ site.organization.area_served | join: ', ' }}, with a founding team and local regional partners.
+- Team: {% assign team = site.team | where: 'group', 'founding' | sort: 'weight' %}{% for m in team %}{{ m.title }} ({{ m.jobtitle | downcase }}){% unless forloop.last %}, {% endunless %}{% endfor %}. The team has used Bitcoin since 2013 and accumulated it since 2017.
+- Approach: education first, then a documented brief, policy and custody design, and a handover with named owners. Legal and tax conclusions stay with the client's own qualified advisers.
+- Website: {{ '/' | absolute_url }}
+
+## Main pages
+
+- [Home]({{ '/' | absolute_url }}): why companies are considering a Bitcoin treasury and how Bahtera's implementation process works
+- [About]({{ '/about/' | absolute_url }}): {{ site.pages | where: 'url', '/about/' | map: 'description' | first }}
+- [Services]({{ '/services/' | absolute_url }}): {{ site.pages | where: 'url', '/services/' | map: 'description' | first }}
+- [Team]({{ '/team/' | absolute_url }}): {{ site.pages | where: 'url', '/team/' | map: 'description' | first }}
+- [Contact]({{ '/contact/' | absolute_url }}): {{ site.pages | where: 'url', '/contact/' | map: 'description' | first }}
+
+## Services
+
+{% for s in site.services %}- [{{ s.title }}]({{ s.url | absolute_url }}): {{ s.description | default: s.summary }}
+{% endfor %}
+## Team
+
+{% assign team = site.team | sort: 'weight' %}{% for m in team %}- [{{ m.title }}]({{ m.url | absolute_url }}): {{ m.jobtitle }}{% if m.group == 'partner' %} (regional partner, {{ m.country }}){% endif %}
+{% endfor %}
+## Guides
+
+{% assign gs = site.guides | sort: 'weight' %}{% for g in gs %}- [{{ g.title }}]({{ g.url | absolute_url }}): {{ g.description }}
+{% endfor %}
+## Myth busting: how we respond to common Bitcoin myths
+
+{% assign ms = site.myths | sort: 'weight' %}{% for q in ms %}- [{{ q.title }}]({{ q.url | absolute_url }}): {{ q.description }}
+{% endfor %}
+## News
+
+{% for p in site.posts %}- [{{ p.title }}]({{ p.url | absolute_url }}): {{ p.description }}
+{% endfor %}
+## Optional
+
+- [Atom feed]({{ '/feed.xml' | absolute_url }})
+- [Sitemap]({{ '/sitemap.xml' | absolute_url }})

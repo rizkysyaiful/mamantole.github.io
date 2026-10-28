@@ -1,17 +1,8 @@
 ---
-title: Contact
 layout: default
-bodyClass: "page-contact"
+bodyClass: page-contact
 ---
-
-<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
-    <div class="row justify-content-start">
-        <div class="col-12 col-md-8">
-            <div class="service service-single">
-                <h1 class="title">{{page.title}}</h1>
-                {% include call.html show_button=false %}
-                <div class="content mt-4">{{content}}</div>
-            </div>
-        </div>
-    </div>
-</div>
+<header class="page-heading container"><span class="eyebrow">Contact</span><h1>{{ page.title }}</h1><p class="lead">Company treasury. Executive education.</p></header>
+<div class="container reading-layout"><article class="content prose">{{ content }}</article><aside class="side-note contact-panel"><span class="eyebrow">Book a 15-minute introduction call</span><h2>A useful first step.</h2>
+<p>Pick a time that suits you for a free 15-minute introduction call with the Bahtera team.</p><a class="button" href="{{ site.data.contact.booking_url }}" target="_blank" rel="noopener noreferrer">Book on Google Calendar &rarr;</a><p class="small-note">Bookings open in Google Calendar in a new tab. Please keep wallet credentials, private keys and sensitive financial records out of any notes you add.</p>
+</aside></div>

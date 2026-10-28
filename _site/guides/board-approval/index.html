@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Getting board approval: a checklist | Bahtera</title>
+<meta name="description" content="Prepare the questions, risks and decision paper a board expects. Five stages, each ending with something written, so approval becomes a normal governance step.">
+<link rel="canonical" href="https://rizkysyaiful.github.io/guides/board-approval/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="Bahtera">
+<meta name="theme-color" content="#172B4D">
+<link rel="alternate" type="application/atom+xml" title="Bahtera blog" href="/feed.xml">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="apple-touch-icon" href="/images/logo/logo-square.png">
+
+<meta property="og:site_name" content="Bahtera">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Getting board approval: a checklist">
+<meta property="og:description" content="Prepare the questions, risks and decision paper a board expects. Five stages, each ending with something written, so approval becomes a normal governance step.">
+<meta property="og:url" content="https://rizkysyaiful.github.io/guides/board-approval/">
+<meta property="og:image" content="https://rizkysyaiful.github.io/images/og-image.png">
+<meta property="og:image:alt" content="Bahtera – Institution-Level Bitcoin Consultancy.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Getting board approval: a checklist">
+<meta name="twitter:description" content="Prepare the questions, risks and decision paper a board expects. Five stages, each ending with something written, so approval becomes a normal governance step.">
+<meta name="twitter:image" content="https://rizkysyaiful.github.io/images/og-image.png"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://rizkysyaiful.github.io/#organization",
+      "name": "Bahtera",
+      "url": "https://rizkysyaiful.github.io/",
+      "slogan": "Institution-Level Bitcoin Consultancy.",
+      "description": "Bahtera is a Bitcoin treasury consultancy for companies and leaders across Asia, including Indonesia, Malaysia, Singapore, India and the Philippines, offering executive education, treasury policy, custody architecture, tax coordination and audit-ready reporting.",
+      "logo": { "@type": "ImageObject", "url": "https://rizkysyaiful.github.io/images/logo/logo-square.png", "width": 512, "height": 512 },
+      "image": "https://rizkysyaiful.github.io/images/og-image.png",
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }],
+      "knowsAbout": ["Bitcoin","Bitcoin treasury","Corporate treasury management","Treasury policy design","Bitcoin custody (multisig and cold storage)","Bitcoin accounting and audit","Executive Bitcoin education"],
+      "employee": [{ "@id": "https://rizkysyaiful.github.io/team/ricky/#person" }, { "@id": "https://rizkysyaiful.github.io/team/faizal/#person" }, { "@id": "https://rizkysyaiful.github.io/team/banitama/#person" }, { "@id": "https://rizkysyaiful.github.io/team/dimas/#person" }, { "@id": "https://rizkysyaiful.github.io/team/arjun-mehta/#person" }, { "@id": "https://rizkysyaiful.github.io/team/maria-santos/#person" }, { "@id": "https://rizkysyaiful.github.io/team/lim-wei-jie/#person" }, { "@id": "https://rizkysyaiful.github.io/team/tan-mei-ling/#person" }],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Bitcoin treasury services",
+        "itemListElement": [{ "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/policy_design/#service" } }, { "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/custody_architecture/#service" } }, { "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/accounting_audit/#service" } }, { "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/regulatory_guidance/#service" } }]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/policy_design/#service",
+      "name": "Treasury Policy Design",
+      "serviceType": "Treasury Policy Design",
+      "description": "A documented framework for treasury decisions, responsibilities, and internal review.",
+      "url": "https://rizkysyaiful.github.io/services/policy_design/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/custody_architecture/#service",
+      "name": "Custody Architecture",
+      "serviceType": "Custody Architecture",
+      "description": "Custody planning that connects technical design with everyday responsibilities.",
+      "url": "https://rizkysyaiful.github.io/services/custody_architecture/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/accounting_audit/#service",
+      "name": "Accounting & Audit Support",
+      "serviceType": "Accounting & Audit Support",
+      "description": "Operational records and reporting workflows designed for review with your finance team.",
+      "url": "https://rizkysyaiful.github.io/services/accounting_audit/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/regulatory_guidance/#service",
+      "name": "Regulatory & Tax Guidance",
+      "serviceType": "Regulatory & Tax Guidance",
+      "description": "A structured way to identify questions and coordinate with your legal and tax advisers.",
+      "url": "https://rizkysyaiful.github.io/services/regulatory_guidance/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/ricky/#person",
+      "name": "Ricky Saif",
+      "jobTitle": "Corporate education",
+      "description": "Ricky Saif has educated corporations since 2013, focusing today on exposing The Fiat Flood crisis – where inflation silently drains cash reserves while traditional assets fail. Ricky empowers pragmatic leaders to adopt Bitcoin treasuries as an inflation-proof solution. He works exclusively with e...",
+      "url": "https://rizkysyaiful.github.io/team/ricky/",
+      "image": "https://rizkysyaiful.github.io/images/team/ricky.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/faizal/#person",
+      "name": "Faizal Abdillah",
+      "jobTitle": "Banking background",
+      "description": "Faizal Abdillah professional journey began in the banking sector, where he gained firsthand insight into traditional finance. The discovery of Bitcoin—a technology with the potential to render banks obsolete—sparked a deep curiosity. As he delved further, he came to believe that many societal iss...",
+      "url": "https://rizkysyaiful.github.io/team/faizal/",
+      "image": "https://rizkysyaiful.github.io/images/team/faizal.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/banitama/#person",
+      "name": "Banitama",
+      "jobTitle": "Software development",
+      "description": "Banitama is a software developer and Bitcoin advocate who began using BTC in 2014—initially unaware of its revolutionary potential until discovering The Bitcoin Standard in 2018, which unlocked his deep dive into monetary history and economics. Now based in Sweden (home of the world’s first centr...",
+      "url": "https://rizkysyaiful.github.io/team/banitama/",
+      "image": "https://rizkysyaiful.github.io/images/team/banitama.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/dimas/#person",
+      "name": "Dimas",
+      "jobTitle": "Regional partner, Indonesia",
+      "description": "Dimas is Bahtera’s partner in Indonesia. He is a co-founder of Bitcoin Indonesia and of Bitcoin House Bali, and hosts the Bitcoin Indonesia Podcast. Based in Bandung, he is a long-time Bitcoin educator and community builder. With Bahtera he brings executive education and treasury policy discussio...",
+      "url": "https://rizkysyaiful.github.io/team/dimas/",
+      "image": "https://rizkysyaiful.github.io/images/team/dimas.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/arjun-mehta/#person",
+      "name": "Arjun Mehta",
+      "jobTitle": "Regional partner, India",
+      "description": "Arjun Mehta is a placeholder profile for Bahtera’s regional partner in India. He will support Indian companies and family offices with executive education, treasury policy discussions and coordination with local tax and accounting advisers. This page is a dummy profile and will be replaced with t...",
+      "url": "https://rizkysyaiful.github.io/team/arjun-mehta/",
+      "image": "https://rizkysyaiful.github.io/images/team/arjun-mehta.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/maria-santos/#person",
+      "name": "Maria Santos",
+      "jobTitle": "Regional partner, Philippines",
+      "description": "Maria Santos is a placeholder profile for Bahtera’s regional partner in the Philippines. She will help Filipino businesses and leaders explore Bitcoin treasury through executive education and practical, locally-aware implementation support. This page is a dummy profile and will be replaced with t...",
+      "url": "https://rizkysyaiful.github.io/team/maria-santos/",
+      "image": "https://rizkysyaiful.github.io/images/team/maria-santos.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/lim-wei-jie/#person",
+      "name": "Lim Wei Jie",
+      "jobTitle": "Regional partner, Malaysia",
+      "description": "Lim Wei Jie is a placeholder profile for Bahtera’s regional partner in Malaysia. He will work with Malaysian companies on treasury education, policy design and the operational readiness of their finance teams. This page is a dummy profile and will be replaced with the partner’s real background on...",
+      "url": "https://rizkysyaiful.github.io/team/lim-wei-jie/",
+      "image": "https://rizkysyaiful.github.io/images/team/lim-wei-jie.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/tan-mei-ling/#person",
+      "name": "Tan Mei Ling",
+      "jobTitle": "Regional partner, Singapore",
+      "description": "Tan Mei Ling is a placeholder profile for Bahtera’s regional partner in Singapore. She will support Singapore-based institutions with custody architecture discussions and audit-ready reporting conversations. This page is a dummy profile and will be replaced with the partner’s real background once...",
+      "url": "https://rizkysyaiful.github.io/team/tan-mei-ling/",
+      "image": "https://rizkysyaiful.github.io/images/team/tan-mei-ling.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://rizkysyaiful.github.io/#website",
+      "url": "https://rizkysyaiful.github.io/",
+      "name": "Bahtera",
+      "description": "Bahtera is a Bitcoin treasury consultancy for companies and leaders across Asia, including Indonesia, Malaysia, Singapore, India and the Philippines, offering executive education, treasury policy, custody architecture, tax coordination and audit-ready reporting.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://rizkysyaiful.github.io/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://rizkysyaiful.github.io/guides/board-approval/#webpage",
+      "url": "https://rizkysyaiful.github.io/guides/board-approval/",
+      "name": "Getting board approval: a checklist | Bahtera",
+      "description": "Prepare the questions, risks and decision paper a board expects. Five stages, each ending with something written, so approval becomes a normal governance step.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://rizkysyaiful.github.io/#website" },
+      "about": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "primaryImageOfPage": { "@type": "ImageObject", "url": "https://rizkysyaiful.github.io/images/og-image.png" },
+      "dateModified": "2026-10-29T00:00:00+07:00",
+      "breadcrumb": { "@id": "https://rizkysyaiful.github.io/guides/board-approval/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rizkysyaiful.github.io/guides/board-approval/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rizkysyaiful.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://rizkysyaiful.github.io/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "Getting board approval: a checklist", "item": "https://rizkysyaiful.github.io/guides/board-approval/" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://rizkysyaiful.github.io/guides/board-approval/#article",
+      "headline": "Getting board approval: a checklist",
+      "description": "Prepare the questions, risks and decision paper a board expects. Five stages, each ending with something written, so approval becomes a normal governance step.",
+      "url": "https://rizkysyaiful.github.io/guides/board-approval/",
+      "mainEntityOfPage": { "@id": "https://rizkysyaiful.github.io/guides/board-approval/#webpage" },
+      "dateModified": "2026-10-29T00:00:00+07:00",
+      "wordCount": 628,
+      "inLanguage": "en",
+      "author": { "@id": "https://rizkysyaiful.github.io/team/ricky/#person" },
+      "publisher": { "@id": "https://rizkysyaiful.github.io/#organization" }
+    }
+  ]
+}
+</script>
+
+  <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon-64x64.png?v=5">
+  <!-- Google Fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Self host font -->
+  <!-- <link rel="preload" href="/assets/fonts/playfair-display.woff2" as="font" type="font/woff2" crossorigin> -->
+  <link href="/assets/css/style.css?v=20261029001038" rel="stylesheet">
+</head>
+
+<body class='page page-guide'>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <nav aria-label="Mobile navigation" id="main-menu-mobile" class="main-menu-mobile">
+  
+  <ul>
+    
+    
+    <li class="">
+      <a href="/about/" >About</a>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/services/" >Services</a>
+    </li>
+    
+    
+    
+    <li class="has-sub"><span class="sub-label">Thoughts</span>
+      <ul class="sub-list">
+        
+        <li class=""><a href="/myths/" >1. Myth Busting</a></li>
+        
+        <li class="active"><a href="/guides/" aria-current="page">2. Guides</a></li>
+        
+        <li class=""><a href="/blog/" >3. News</a></li>
+        
+      </ul>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/team/" >Team</a>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/contact/" >Contact</a>
+    </li>
+    
+    
+  </ul>
+</nav>
+
+  <div id="wrapper" class="wrapper">
+    <div class='header fixed-top'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height="46px" alt="Bahtera" src="/images/logo/logo.png?v=5" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height="40px" alt="Bahtera" src="/images/logo/logo-mobile.png?v=5" /></a>
+    </div>
+    <nav aria-label="Main navigation" id="main-menu" class="main-menu">
+  
+  <ul>
+    
+    
+    <li class="">
+      <a href="/about/" >About</a>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/services/" >Services</a>
+    </li>
+    
+    
+    
+    
+    
+    <li class="has-sub active">
+      <button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="sub-thoughts">Thoughts<span class="caret" aria-hidden="true"></span></button>
+      <ul class="sub-menu" id="sub-thoughts">
+        
+        <li class=""><a href="/myths/" >1. Myth Busting</a></li>
+        
+        <li class="active"><a href="/guides/" aria-current="page">2. Guides</a></li>
+        
+        <li class=""><a href="/blog/" >3. News</a></li>
+        
+      </ul>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/team/" >Team</a>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/contact/" >Contact</a>
+    </li>
+    
+    
+  </ul>
+</nav>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Open menu" aria-controls="main-menu-mobile" aria-expanded="false">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    <main id="main-content" tabindex="-1"><header class="page-heading container"><a class="eyebrow" href="/guides/">&larr; All guides</a><p class="post-meta">Guide 3 &middot; 7 min read</p><h1>Getting board approval: a checklist</h1><p class="lead">Prepare the questions, risks and decision paper a board expects. Five stages, each ending with something written, so approval becomes a normal governance step.</p><p class="post-meta author-line">By <a href="/team/ricky/">Ricky Saif</a> &middot; Reviewed by <a href="/team/faizal/">Faizal Abdillah</a> &middot; Updated <time datetime="2026-10-29T00:00:00+07:00">October 29, 2026</time></p>
+</header>
+
+
+<figure class="article-hero"><img src="/images/thumbs/board-approval.png" alt="A checklist with three gold checkmarks" width="1200" height="675"></figure>
+<article class="container content article-prose"><p>You believe in the idea. The board has not heard it yet. Between those two points sits a lot of work, and most of it is not persuasion.</p>
+
+<p>This guide gives you a checklist for getting a Bitcoin treasury proposal in front of your board in a form they can decide on.</p>
+
+<h2 id="who-this-is-for">Who this is for</h2>
+
+<p>CEOs, CFOs and company secretaries who will carry the proposal to the board.</p>
+
+<h2 id="think-of-it-as-five-stages">Think of it as five stages</h2>
+
+<p>Each stage ends with something written. If a stage has nothing written, it is not done.</p>
+
+<figure><img src="/images/figures/board-approval-1.svg" alt="Five stages: brief, educate, draft, pre-read and decide, ending with a scheduled review date." loading="lazy" /><figcaption>Five stages, each ending in a document. After approval, set a review date before anything is bought.</figcaption></figure>
+
+<h2 id="stage-1-brief">Stage 1: Brief</h2>
+
+<p>Start with the problem, not the asset. Write one page that answers: what is the risk to our reserves, how big is it, and what are the options?</p>
+
+<p>Keep it in plain words. If a director cannot repeat it to a colleague, it is too complicated.</p>
+
+<blockquote>
+  <p>What’s in it for them? Why should this board spend its attention on this?</p>
+</blockquote>
+
+<p>Answer that in the first paragraph.</p>
+
+<h2 id="stage-2-educate">Stage 2: Educate</h2>
+
+<p>Most directors have heard headlines, not explanations. Plan a short <a href="/guides/leadership-session/">leadership session</a> before the formal paper.</p>
+
+<p>Let people ask the “silly” questions in a room without a vote. You will learn which worries are real.</p>
+
+<h2 id="stage-3-draft-the-policy-and-the-decision-paper">Stage 3: Draft the policy and the decision paper</h2>
+
+<p>Two documents, not one.</p>
+
+<ul>
+  <li><strong>The policy.</strong> The <a href="/guides/treasury-policy/">treasury policy guide</a> shows seven sections. Keep it to one page.</li>
+  <li><strong>The decision paper.</strong> What you are asking the board to decide, the options considered, the risks, and the recommendation.</li>
+</ul>
+
+<p>A decision paper should end with a request that can be answered yes or no. For example: “approve a pilot allocation of up to X% of reserves, under the attached policy, with review in six months.”</p>
+
+<h2 id="stage-4-pre-read-and-pre-wire">Stage 4: Pre-read and pre-wire</h2>
+
+<p>Send the papers early. Meet directors one at a time if you can. Ask each one: “What is your biggest worry?”</p>
+
+<p>You will hear the same few concerns:</p>
+
+<ol>
+  <li><strong>Volatility.</strong> Show the size cap and what a severe fall would do. See <a href="/myths/too-volatile-for-treasury/">the volatility myth</a>.</li>
+  <li><strong>Custody and loss.</strong> Show the signing quorum and recovery drill. See <a href="/myths/lose-the-keys-gone/">the keys myth</a>.</li>
+  <li><strong>Accounting and audit.</strong> Show you have talked to the auditor. See <a href="/myths/cannot-audit-or-account/">the accounting myth</a>.</li>
+  <li><strong>Regulation.</strong> Show the checklist your lawyer has answered. See <a href="/myths/regulators-will-not-allow/">the regulation myth</a>.</li>
+  <li><strong>Reputation.</strong> Be honest about it. Decide what you will say to staff, customers and press.</li>
+</ol>
+
+<p>Where a director raises something new, add it to the paper.</p>
+
+<h2 id="stage-5-decide">Stage 5: Decide</h2>
+
+<p>At the meeting, present for ten minutes and leave the rest for questions.</p>
+
+<p>Do not defend the asset. Present the <strong>trade-offs</strong>. A board that can see the downside written down trusts the upside more.</p>
+
+<p>Ask for a decision on the smallest sensible step. A first step with a review date is easier to approve than an open commitment.</p>
+
+<h2 id="after-the-yes">After the yes</h2>
+
+<ul>
+  <li>Record the resolution and the exact limits approved.</li>
+  <li>Set the first review date now.</li>
+  <li>Assign a named owner for each custody and approval role.</li>
+  <li>Tell the auditor.</li>
+</ul>
+
+<p>Do nothing with money until these are done.</p>
+
+<h2 id="common-mistakes">Common mistakes</h2>
+
+<ul>
+  <li>Starting with the asset instead of the problem.</li>
+  <li>Surprising a director in the meeting.</li>
+  <li>A paper that argues instead of presenting trade-offs.</li>
+  <li>Asking for too much at once.</li>
+  <li>No review date.</li>
+</ul>
+
+<h2 id="the-bottom-line">The bottom line</h2>
+
+<p>Boards say yes to clear, limited, reviewable steps. They say no to surprises.</p>
+
+<p>At the end of the day, a board is a group of people trying to protect the company. Give them what they need to do it well.</p>
+
+<h2 id="checklist">Checklist</h2>
+
+<ul>
+  <li>One-page brief written in plain words</li>
+  <li>Leadership session held</li>
+  <li>One-page policy and a decision paper drafted</li>
+  <li>Auditor and lawyer consulted</li>
+  <li>Each director’s main concern heard and answered</li>
+  <li>A yes-or-no request with a limit written</li>
+  <li>Review date and named owners set</li>
+</ul>
+</article>
+
+<aside class="container related-posts"><span class="eyebrow">Related myths</span><div class="card-grid"><a class="profile-card" href="/myths/board-will-never-approve/"><span class="eyebrow">Myth 3</span><h2>"Our board will never approve this."</h2><span>Read our answer &rarr;</span></a></div></aside>
+<p class="container small-note disclaimer">This guide is educational. Legal, tax and accounting conclusions stay with your own qualified advisers.</p>
+<aside class="section-cta container">
+  <div><span class="eyebrow">Start with a conversation</span><h2>Bring clarity to your next step.</h2><p>Explore the right education and implementation support for your team.</p></div>
+  <a class="button" href="/contact/">Discuss your needs <span aria-hidden="true">&rarr;</span></a>
+</aside>
+
+</main>
+  </div>
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <div class="logo-footer">
+            <a href="/"><img height="43px" alt="Bahtera" src="/images/logo/logo-footer.png?v=5" /></a>
+            <p class="brand-tagline">Institution-Level Bitcoin Consultancy.</p>
+            <p class="brand-regions">Indonesia &middot; Malaysia &middot; Singapore &middot; India &middot; Philippines</p>
+          </div>
+          <ul>
+            
+            
+            <li class="">
+              <a href="/guides/">Guides</a>
+            </li>
+            
+            <li class="">
+              <a href="/myths/">Myth Busting</a>
+            </li>
+            
+            <li class="">
+              <a href="/blog/">News</a>
+            </li>
+            
+            <li class="">
+              <a href="/contact/">Contact</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            <div class="social">
+  
+</div>
+
+          
+          
+          <div class="copyright">&copy; 2026 PT. Bahtera Tujuan Cemerlang. All rights reserved.</div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script type="text/javascript" src="/assets/js/scripts.js?v=20261029001038"></script>
+  
+</body>
+</html>

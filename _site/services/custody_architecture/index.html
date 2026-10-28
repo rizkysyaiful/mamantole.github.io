@@ -3,70 +3,330 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Custody Architecture</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/png" href="/images/favicon-32x32.svg">
+  <title>Bitcoin Custody Architecture: Multisig &amp; Cold Storage | Bahtera</title>
+<meta name="description" content="Custody planning that connects technical design with everyday responsibilities.">
+<link rel="canonical" href="https://rizkysyaiful.github.io/services/custody_architecture/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="Bahtera">
+<meta name="theme-color" content="#172B4D">
+<link rel="alternate" type="application/atom+xml" title="Bahtera blog" href="/feed.xml">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="apple-touch-icon" href="/images/logo/logo-square.png">
+
+<meta property="og:site_name" content="Bahtera">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Custody Architecture">
+<meta property="og:description" content="Custody planning that connects technical design with everyday responsibilities.">
+<meta property="og:url" content="https://rizkysyaiful.github.io/services/custody_architecture/">
+<meta property="og:image" content="https://rizkysyaiful.github.io/images/og-image.png">
+<meta property="og:image:alt" content="Bahtera – Institution-Level Bitcoin Consultancy.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Custody Architecture">
+<meta name="twitter:description" content="Custody planning that connects technical design with everyday responsibilities.">
+<meta name="twitter:image" content="https://rizkysyaiful.github.io/images/og-image.png"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://rizkysyaiful.github.io/#organization",
+      "name": "Bahtera",
+      "url": "https://rizkysyaiful.github.io/",
+      "slogan": "Institution-Level Bitcoin Consultancy.",
+      "description": "Bahtera is a Bitcoin treasury consultancy for companies and leaders across Asia, including Indonesia, Malaysia, Singapore, India and the Philippines, offering executive education, treasury policy, custody architecture, tax coordination and audit-ready reporting.",
+      "logo": { "@type": "ImageObject", "url": "https://rizkysyaiful.github.io/images/logo/logo-square.png", "width": 512, "height": 512 },
+      "image": "https://rizkysyaiful.github.io/images/og-image.png",
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }],
+      "knowsAbout": ["Bitcoin","Bitcoin treasury","Corporate treasury management","Treasury policy design","Bitcoin custody (multisig and cold storage)","Bitcoin accounting and audit","Executive Bitcoin education"],
+      "employee": [{ "@id": "https://rizkysyaiful.github.io/team/ricky/#person" }, { "@id": "https://rizkysyaiful.github.io/team/faizal/#person" }, { "@id": "https://rizkysyaiful.github.io/team/banitama/#person" }, { "@id": "https://rizkysyaiful.github.io/team/dimas/#person" }, { "@id": "https://rizkysyaiful.github.io/team/arjun-mehta/#person" }, { "@id": "https://rizkysyaiful.github.io/team/maria-santos/#person" }, { "@id": "https://rizkysyaiful.github.io/team/lim-wei-jie/#person" }, { "@id": "https://rizkysyaiful.github.io/team/tan-mei-ling/#person" }],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Bitcoin treasury services",
+        "itemListElement": [{ "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/policy_design/#service" } }, { "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/custody_architecture/#service" } }, { "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/accounting_audit/#service" } }, { "@type": "Offer", "itemOffered": { "@id": "https://rizkysyaiful.github.io/services/regulatory_guidance/#service" } }]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/policy_design/#service",
+      "name": "Treasury Policy Design",
+      "serviceType": "Treasury Policy Design",
+      "description": "A documented framework for treasury decisions, responsibilities, and internal review.",
+      "url": "https://rizkysyaiful.github.io/services/policy_design/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/custody_architecture/#service",
+      "name": "Custody Architecture",
+      "serviceType": "Custody Architecture",
+      "description": "Custody planning that connects technical design with everyday responsibilities.",
+      "url": "https://rizkysyaiful.github.io/services/custody_architecture/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/accounting_audit/#service",
+      "name": "Accounting & Audit Support",
+      "serviceType": "Accounting & Audit Support",
+      "description": "Operational records and reporting workflows designed for review with your finance team.",
+      "url": "https://rizkysyaiful.github.io/services/accounting_audit/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rizkysyaiful.github.io/services/regulatory_guidance/#service",
+      "name": "Regulatory & Tax Guidance",
+      "serviceType": "Regulatory & Tax Guidance",
+      "description": "A structured way to identify questions and coordinate with your legal and tax advisers.",
+      "url": "https://rizkysyaiful.github.io/services/regulatory_guidance/",
+      "provider": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "areaServed": [{ "@type": "Country", "name": "Indonesia" }, { "@type": "Country", "name": "Malaysia" }, { "@type": "Country", "name": "Singapore" }, { "@type": "Country", "name": "India" }, { "@type": "Country", "name": "Philippines" }]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/ricky/#person",
+      "name": "Ricky Saif",
+      "jobTitle": "Corporate education",
+      "description": "Ricky Saif has educated corporations since 2013, focusing today on exposing The Fiat Flood crisis – where inflation silently drains cash reserves while traditional assets fail. Ricky empowers pragmatic leaders to adopt Bitcoin treasuries as an inflation-proof solution. He works exclusively with e...",
+      "url": "https://rizkysyaiful.github.io/team/ricky/",
+      "image": "https://rizkysyaiful.github.io/images/team/ricky.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/faizal/#person",
+      "name": "Faizal Abdillah",
+      "jobTitle": "Banking background",
+      "description": "Faizal Abdillah professional journey began in the banking sector, where he gained firsthand insight into traditional finance. The discovery of Bitcoin—a technology with the potential to render banks obsolete—sparked a deep curiosity. As he delved further, he came to believe that many societal iss...",
+      "url": "https://rizkysyaiful.github.io/team/faizal/",
+      "image": "https://rizkysyaiful.github.io/images/team/faizal.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/banitama/#person",
+      "name": "Banitama",
+      "jobTitle": "Software development",
+      "description": "Banitama is a software developer and Bitcoin advocate who began using BTC in 2014—initially unaware of its revolutionary potential until discovering The Bitcoin Standard in 2018, which unlocked his deep dive into monetary history and economics. Now based in Sweden (home of the world’s first centr...",
+      "url": "https://rizkysyaiful.github.io/team/banitama/",
+      "image": "https://rizkysyaiful.github.io/images/team/banitama.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/dimas/#person",
+      "name": "Dimas",
+      "jobTitle": "Regional partner, Indonesia",
+      "description": "Dimas is Bahtera’s partner in Indonesia. He is a co-founder of Bitcoin Indonesia and of Bitcoin House Bali, and hosts the Bitcoin Indonesia Podcast. Based in Bandung, he is a long-time Bitcoin educator and community builder. With Bahtera he brings executive education and treasury policy discussio...",
+      "url": "https://rizkysyaiful.github.io/team/dimas/",
+      "image": "https://rizkysyaiful.github.io/images/team/dimas.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/arjun-mehta/#person",
+      "name": "Arjun Mehta",
+      "jobTitle": "Regional partner, India",
+      "description": "Arjun Mehta is a placeholder profile for Bahtera’s regional partner in India. He will support Indian companies and family offices with executive education, treasury policy discussions and coordination with local tax and accounting advisers. This page is a dummy profile and will be replaced with t...",
+      "url": "https://rizkysyaiful.github.io/team/arjun-mehta/",
+      "image": "https://rizkysyaiful.github.io/images/team/arjun-mehta.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/maria-santos/#person",
+      "name": "Maria Santos",
+      "jobTitle": "Regional partner, Philippines",
+      "description": "Maria Santos is a placeholder profile for Bahtera’s regional partner in the Philippines. She will help Filipino businesses and leaders explore Bitcoin treasury through executive education and practical, locally-aware implementation support. This page is a dummy profile and will be replaced with t...",
+      "url": "https://rizkysyaiful.github.io/team/maria-santos/",
+      "image": "https://rizkysyaiful.github.io/images/team/maria-santos.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/lim-wei-jie/#person",
+      "name": "Lim Wei Jie",
+      "jobTitle": "Regional partner, Malaysia",
+      "description": "Lim Wei Jie is a placeholder profile for Bahtera’s regional partner in Malaysia. He will work with Malaysian companies on treasury education, policy design and the operational readiness of their finance teams. This page is a dummy profile and will be replaced with the partner’s real background on...",
+      "url": "https://rizkysyaiful.github.io/team/lim-wei-jie/",
+      "image": "https://rizkysyaiful.github.io/images/team/lim-wei-jie.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rizkysyaiful.github.io/team/tan-mei-ling/#person",
+      "name": "Tan Mei Ling",
+      "jobTitle": "Regional partner, Singapore",
+      "description": "Tan Mei Ling is a placeholder profile for Bahtera’s regional partner in Singapore. She will support Singapore-based institutions with custody architecture discussions and audit-ready reporting conversations. This page is a dummy profile and will be replaced with the partner’s real background once...",
+      "url": "https://rizkysyaiful.github.io/team/tan-mei-ling/",
+      "image": "https://rizkysyaiful.github.io/images/team/tan-mei-ling.svg",
+      "worksFor": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "knowsAbout": ["Bitcoin", "Bitcoin treasury"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://rizkysyaiful.github.io/#website",
+      "url": "https://rizkysyaiful.github.io/",
+      "name": "Bahtera",
+      "description": "Bahtera is a Bitcoin treasury consultancy for companies and leaders across Asia, including Indonesia, Malaysia, Singapore, India and the Philippines, offering executive education, treasury policy, custody architecture, tax coordination and audit-ready reporting.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://rizkysyaiful.github.io/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://rizkysyaiful.github.io/services/custody_architecture/#webpage",
+      "url": "https://rizkysyaiful.github.io/services/custody_architecture/",
+      "name": "Bitcoin Custody Architecture: Multisig & Cold Storage | Bahtera",
+      "description": "Custody planning that connects technical design with everyday responsibilities.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://rizkysyaiful.github.io/#website" },
+      "about": { "@id": "https://rizkysyaiful.github.io/#organization" },
+      "primaryImageOfPage": { "@type": "ImageObject", "url": "https://rizkysyaiful.github.io/images/og-image.png" },
+      "mainEntity": { "@id": "https://rizkysyaiful.github.io/services/custody_architecture/#service" },
+      "breadcrumb": { "@id": "https://rizkysyaiful.github.io/services/custody_architecture/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rizkysyaiful.github.io/services/custody_architecture/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rizkysyaiful.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://rizkysyaiful.github.io/services/" },
+        { "@type": "ListItem", "position": 3, "name": "Custody Architecture", "item": "https://rizkysyaiful.github.io/services/custody_architecture/" }
+      ]
+    }
+  ]
+}
+</script>
+
+  <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon-64x64.png?v=5">
   <!-- Google Fonts CDN -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <!-- Self host font -->
   <!-- <link rel="preload" href="/assets/fonts/playfair-display.woff2" as="font" type="font/woff2" crossorigin> -->
-  <link href="/assets/css/style.css" rel="stylesheet">
-  
-  
-  <meta property="og:title" content="Custody Architecture"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content=""/>
-  <meta property="og:image" content="http://localhost:4000/images/features/custody_architecture.svg"/>
-  
-  <meta name="twitter:card" content="summary"/>
-  <meta name="twitter:site" content=""/>
-  <meta name="twitter:creator" content=""/>
-
+  <link href="/assets/css/style.css?v=20261029001038" rel="stylesheet">
 </head>
 
 <body class='page page-service'>
-  <div id="main-menu-mobile" class="main-menu-mobile">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <nav aria-label="Mobile navigation" id="main-menu-mobile" class="main-menu-mobile">
   
   <ul>
     
-    <li class="">
-      <a href="/individual-treasury/">Individual Treasury</a>
-    </li>
     
     <li class="">
-      <a href="/myths/">Can BTC Replace USD?</a>
+      <a href="/about/" >About</a>
     </li>
+    
+    
+    
+    <li class="active">
+      <a href="/services/" aria-current="page">Services</a>
+    </li>
+    
+    
+    
+    <li class="has-sub"><span class="sub-label">Thoughts</span>
+      <ul class="sub-list">
+        
+        <li class=""><a href="/myths/" >1. Myth Busting</a></li>
+        
+        <li class=""><a href="/guides/" >2. Guides</a></li>
+        
+        <li class=""><a href="/blog/" >3. News</a></li>
+        
+      </ul>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/team/" >Team</a>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/contact/" >Contact</a>
+    </li>
+    
     
   </ul>
-</div>
+</nav>
 
   <div id="wrapper" class="wrapper">
     <div class='header fixed-top'>
   <div class="container">
     <div class="logo">
-      <a href="/"><img height="32px" alt="Bitcoinstitution" src="/images/logo/logo.svg" /></a>
+      <a href="/"><img height="46px" alt="Bahtera" src="/images/logo/logo.png?v=5" /></a>
     </div>
     <div class="logo-mobile">
-      <a href="/"><img height="32px" alt="Bitcoinstitution" src="/images/logo/logo-mobile.svg" /></a>
+      <a href="/"><img height="40px" alt="Bahtera" src="/images/logo/logo-mobile.png?v=5" /></a>
     </div>
-    <div id="main-menu" class="main-menu">
+    <nav aria-label="Main navigation" id="main-menu" class="main-menu">
   
   <ul>
     
-    <li class="">
-      <a href="/individual-treasury/">Individual Treasury</a>
-    </li>
     
     <li class="">
-      <a href="/myths/">Can BTC Replace USD?</a>
+      <a href="/about/" >About</a>
     </li>
+    
+    
+    
+    <li class="active">
+      <a href="/services/" aria-current="page">Services</a>
+    </li>
+    
+    
+    
+    
+    
+    <li class="has-sub">
+      <button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="sub-thoughts">Thoughts<span class="caret" aria-hidden="true"></span></button>
+      <ul class="sub-menu" id="sub-thoughts">
+        
+        <li class=""><a href="/myths/" >1. Myth Busting</a></li>
+        
+        <li class=""><a href="/guides/" >2. Guides</a></li>
+        
+        <li class=""><a href="/blog/" >3. News</a></li>
+        
+      </ul>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/team/" >Team</a>
+    </li>
+    
+    
+    
+    <li class="">
+      <a href="/contact/" >Contact</a>
+    </li>
+    
     
   </ul>
-</div>
+</nav>
 
-    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Open menu" aria-controls="main-menu-mobile" aria-expanded="false">
   <span class="hamburger-box">
     <span class="hamburger-inner"></span>
   </span>
@@ -74,130 +334,38 @@
   </div>
 </div>
 
-    <div class="container pb-10 pt-10 pt-md-10 pb-md-10">
-  <div class="row justify-content-start">
-    <div class="col-12 col-md-8">
-      <div class="service service-single">
-        <h1 class="title">Custody Architecture</h1>
-        <div class="content"><p>Multisig configurations, cold storage solutions, and institutional security standards.</p>
+    <main id="main-content" tabindex="-1"><header class="page-heading container"><a class="eyebrow" href="/services/">&larr; All services</a><h1>Custody Architecture</h1><p class="lead">Custody planning that connects technical design with everyday responsibilities.</p></header>
+<div class="container reading-layout"><article class="content prose"><p>Multisig configurations, cold storage solutions, and institutional security standards.</p>
 
-<p><img src="/images/austin-distel-nGc5RT2HmF0-unsplash.jpg" alt="Custody Architecture" /></p>
+<!--more-->
 
-<h1 id="objectives">Objectives</h1>
+<h2 id="design-around-the-people-who-operate-it">Design around the people who operate it</h2>
 
-<p>Financial accounting and financial reporting are often used as synonyms.</p>
+<p>Custody is an organisational responsibility as well as a technical design problem. We help your team examine how access, approvals, recovery, and continuity fit into its operating model.</p>
 
-<ol>
-  <li>According to International Financial Reporting Standards: the objective of financial reporting is:</li>
-  <li>To provide financial information that is useful to existing and potential investors, lenders and other creditors in making decisions about providing resources to the reporting entity.</li>
-  <li>According to the European Accounting Association:</li>
-</ol>
-
-<h2 id="relevance">Relevance</h2>
-
-<p>Relevance is the capacity of the financial information to influence the decision of its users. The ingredients of relevance are the predictive value and confirmatory value. Materiality is a sub-quality of relevance.</p>
-
-<blockquote>
-  <p>The ingredients of relevance are the predictive value and confirmatory value.</p>
-</blockquote>
-
-<p>Information is considered material if its omission or misstatement could influence the economic decisions of users taken on the basis of the financial statements.</p>
-
-<h2 id="faithful-representation">Faithful Representation</h2>
-
-<p>Faithful representation means that the actual effects of the transactions shall be properly accounted for and reported in the financial statements. The words and numbers must match what really happened in the transaction. The ingredients of faithful representation are completeness, neutrality and free from error.</p>
-
-<h2 id="enhancing-qualitative-characteristics">Enhancing Qualitative Characteristics</h2>
-
-<h3 id="verifiability">Verifiability</h3>
-
-<p>Verifiability implies consensus between the different knowledgeable and independent users of financial information. Such information must be supported by sufficient evidence to follow the principle of objectivity.</p>
-
-<h3 id="comparability">Comparability</h3>
-
-<p>Comparability is the uniform application of accounting methods across entities in the same industry. The principle of consistency is under comparability. Consistency is the uniform application of accounting across points in time within an entity.</p>
-
-<h3 id="understandability">Understandability</h3>
-
-<p>Understandability means that accounting reports should be expressed as clearly as possible and should be understood by those to whom the information is relevant.
-Timeliness: Timeliness implies that financial information must be presented to the users before a decision is to be made.</p>
-
-<hr />
-
-<h2 id="statement-of-cash-flows">Statement of cash flows</h2>
-
-<p>The statement of cash flows considers the inputs and outputs in concrete cash within a stated period. The general template of a cash flow statement is as follows: Cash Inflow - Cash Outflow + Opening Balance = Closing Balance</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Cash Inflow</th>
-      <th>Outflow</th>
-      <th>Opening Balance</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><em>Monday</em></td>
-      <td><code class="language-plaintext highlighter-rouge">Tuesday</code></td>
-      <td><strong>Wednesday</strong></td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><strong>Example 1:</strong> in the beginning of September, Ellen started out with $5 in her bank account. During that same month, Ellen borrowed $20 from Tom. At the end of the month, Ellen bought a pair of shoes for $7. Ellen’s cash flow statement for the month of September looks like this:</p>
+<h2 id="what-we-work-through">What we work through</h2>
 
 <ul>
-  <li>Cash inflow: $20</li>
-  <li>Cash outflow:$7</li>
-  <li>Opening balance: $5</li>
-  <li>Closing balance: $20 – $7 + $5 = $18</li>
+  <li>Document custody requirements and the people involved.</li>
+  <li>Compare proposed workflows with your internal approval process.</li>
+  <li>Map access responsibilities, handovers, and recovery procedures.</li>
+  <li>Prepare a controlled walkthrough and implementation checklist.</li>
 </ul>
 
-<p><strong>Example 2:</strong> in the beginning of June, WikiTables, a company that buys and resells tables, sold 2 tables. They’d originally bought the tables for $25 each, and sold them at a price of $50 per table. The first table was paid out in cash however the second one was bought in credit terms. WikiTables’ cash flow statement for the month of June looks like this:</p>
+<h2 id="what-you-take-away">What you take away</h2>
 
-<blockquote>
-  <p><strong>Important:</strong> the cash flow statement only considers the exchange of actual cash, and ignores what the person in question owes or is owed.</p>
-</blockquote>
+<p>A custody design brief, an operational responsibility map, and a documented review checklist.</p>
 
-<h2 id="statement-of-financial-position-balance-sheet">Statement of financial position (balance sheet)</h2>
+<h2 id="start-with-your-context">Start with your context</h2>
 
-<p>The balance sheet is the financial statement showing a firm’s assets, liabilities and equity (capital) at a set point in time, usually the end of the fiscal year reported on the accompanying income statement.</p>
+<p>We agree the scope and deliverables with you before work begins. Bring your current process, the people involved, and the questions you want to resolve.</p>
+</article><aside class="side-note"><img class="service-icon" src="/images/features/custody_architecture.svg" alt="" width="100" height="100"><h2>Built around your team.</h2><p>Let's define the questions, people, and deliverables for your organisation.</p><a class="button" href="/contact/">Discuss this service</a></aside></div>
+<aside class="section-cta container">
+  <div><span class="eyebrow">Start with a conversation</span><h2>Bring clarity to your next step.</h2><p>Explore the right education and implementation support for your team.</p></div>
+  <a class="button" href="/contact/">Discuss your needs <span aria-hidden="true">&rarr;</span></a>
+</aside>
 
-<ul>
-  <li><strong>fixed assets</strong>
-    <ul>
-      <li>property</li>
-      <li>building</li>
-      <li>equipment (such as factory machinery)</li>
-    </ul>
-  </li>
-  <li><strong>intangible assets</strong>
-    <ul>
-      <li>copyrights</li>
-      <li>trademarks</li>
-      <li>patents
-        <ul>
-          <li>pending</li>
-          <li>international</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>goodwill</li>
-</ul>
-
-<p>Owner’s equity, sometimes referred to as net assets, is represented differently depending on the type of business ownership. Business ownership can be in the form of a sole proprietorship, partnership, or a corporation. For a corporation, the owner’s equity portion usually shows common stock, and retained earnings (earnings kept in the company). Retained earnings come from the retained earnings statement, prepared prior to the balance sheet.</p>
-</div>
-      </div>
-    </div>
-  </div>
-</div>
+</main>
   </div>
   <div class="footer">
   <div class="container">
@@ -205,17 +373,27 @@ Timeliness: Timeliness implies that financial information must be presented to t
       <div class="col-12">
         <div class="footer-inner">
           <div class="logo-footer">
-            <a href="/"><img height="32px" alt="Bitcoinstitution" src="/images/logo/logo-footer.svg" /></a>
+            <a href="/"><img height="43px" alt="Bahtera" src="/images/logo/logo-footer.png?v=5" /></a>
+            <p class="brand-tagline">Institution-Level Bitcoin Consultancy.</p>
+            <p class="brand-regions">Indonesia &middot; Malaysia &middot; Singapore &middot; India &middot; Philippines</p>
           </div>
           <ul>
             
             
             <li class="">
-              <a href="/individual-treasury/">Individual Treasury</a>
+              <a href="/guides/">Guides</a>
             </li>
             
             <li class="">
-              <a href="/myths/">Can BTC Replace USD?</a>
+              <a href="/myths/">Myth Busting</a>
+            </li>
+            
+            <li class="">
+              <a href="/blog/">News</a>
+            </li>
+            
+            <li class="">
+              <a href="/contact/">Contact</a>
             </li>
             
           </ul>
@@ -233,30 +411,18 @@ Timeliness: Timeliness implies that financial information must be presented to t
           
             <div class="social">
   
-    <a href="https://github.com/zerostaticthemes/jekyll-serif-theme" target="blank"><img src="/images/social/github.svg" title="Github" alt="Github" /></a>
-  
-    <a href="https://twitter.com/zerostaticio" target="blank"><img src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
-  
-    <a href="https://facebook.com" target="blank"><img src="/images/social/facebook.svg" title="Facebook" alt="Facebook" /></a>
-  
-    <a href="mailto:ekyllserif@example.com " target="blank"><img src="/images/social/email.svg" title="Email" alt="Email" /></a>
-  
-    <a href="https://instagram.com" target="blank"><img src="/images/social/instagram.svg" title="Instagram" alt="Instagram" /></a>
-  
-    <a href="https://discord.com" target="blank"><img src="/images/social/discord.svg" title="Discord" alt="Discord" /></a>
-  
 </div>
 
           
           
-          <div class="copyright">Bitcoin Institution © 2025</div>
+          <div class="copyright">&copy; 2026 PT. Bahtera Tujuan Cemerlang. All rights reserved.</div>
           
         </div>
       </div>
     </div>
   </div>
 </div>
-  <script type="text/javascript" src="/assets/js/scripts.js"></script>
+  <script type="text/javascript" src="/assets/js/scripts.js?v=20261029001038"></script>
   
 </body>
 </html>
