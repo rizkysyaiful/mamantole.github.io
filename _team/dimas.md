@@ -2,7 +2,7 @@
 title: "Dimas"
 date: 2026-10-28T09:00:00+07:00
 image: "images/team/dimas.svg"
-quote: "“Educate Indonesia about Bitcoin, one community at a time.”"
+quote: "Co-founder of Bitcoin Indonesia and Bitcoin House Bali."
 jobtitle: "Regional partner, Indonesia"
 group: partner
 country: Indonesia

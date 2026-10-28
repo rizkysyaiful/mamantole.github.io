@@ -111,6 +111,14 @@ body.page { background: $cream; color: $ink; line-height: 1.7; }
 .article-body h2 { font-size: 1.35rem; }
 .article-prose { max-width: 780px; padding-bottom: 45px; }
 .article-prose h2 { margin-top: 38px; }
+.container.col-narrow { max-width: 780px; margin-left: auto; margin-right: auto; }
+.page-myth .page-heading h1, .page-guide .page-heading h1 { font-size: clamp(2rem, 4.2vw, 3.1rem); }
+.page-myth .answer-box { max-width: none; }
+.author-line { display: flex; align-items: center; gap: 16px; margin-top: 8px; }
+.author-face { display: block; width: 64px; height: 64px; border-radius: 50%; object-fit: cover; background: $cream-deep; border: 1px solid $rule; }
+.author-meta { display: flex; flex-direction: column; gap: 2px; margin: 0; line-height: 1.4; }
+.author-name { font-weight: 600; }
+.author-role, .author-date { color: $muted-ink; font-size: .85em; }
 .article-prose figure, .article-hero { margin: 34px 0; }
 .article-prose figure img, .article-prose figure svg, .article-hero img { display: block; width: 100%; height: auto; border: 1px solid $rule; border-radius: 4px; background: #fcf9f0; }
 .article-prose figcaption { margin-top: 10px; font-family: $font-family-heading; font-size: .78rem; line-height: 1.6; color: $muted-ink; }

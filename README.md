@@ -25,7 +25,7 @@ Contact details in `_data/contact.yml` must be verified before enabling email en
 
 The logo lockups and icon are in `images/logo/`; the favicon is `images/favicon-64x64.png`. Site colours and regional-section styles are in `_sass/_cream-theme.scss`.
 
-Content pillars: `_myths/` (answer-first myth pages) and `_guides/` (practical guides), each with `author`, `reviewer`, `related_guide` and `example: true` front matter. Set `example_content: false` in `_config.yml` to hide the "Example draft" banner once real content is in.
+Content pillars: `_myths/` (answer-first myth pages) and `_guides/` (practical guides), each with `author`, `related_guide` and `thumbnail` front matter. Pages show the author's face and name; reviewers are not shown. `example: true` brings back the "Example draft" banner while `example_content` is true in `_config.yml`.
 
 `images/regions-map.svg` highlights Indonesia, Malaysia, Singapore, India, and the Philippines. Its country outlines are derived from [Natural Earth 1:50m Admin 0 countries](https://www.naturalearthdata.com/downloads/50m-cultural-vectors/), a public-domain map dataset. The Singapore marker is enlarged for readability.
 
