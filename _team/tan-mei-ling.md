@@ -6,6 +6,7 @@ quote: "“Clarity first, then custody.”"
 jobtitle: "Regional partner, Singapore"
 group: partner
 country: Singapore
+permalink: /partner/tan-mei-ling/
 weight: 13
 ---
 

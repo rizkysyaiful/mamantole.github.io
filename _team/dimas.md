@@ -1,11 +1,12 @@
 ---
 title: "Dimas"
 date: 2026-10-28T09:00:00+07:00
-image: "images/team/dimas.svg"
+image: "images/team/dimas-photo.svg"
 quote: "Co-founder of Bitcoin Indonesia and Bitcoin House Bali."
 jobtitle: "Regional partner, Indonesia"
 group: partner
 country: Indonesia
+permalink: /partner/dimas/
 weight: 9
 ---
 

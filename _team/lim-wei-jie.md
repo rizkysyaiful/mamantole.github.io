@@ -6,6 +6,7 @@ quote: "“A treasury policy is only as good as the people who own it.”"
 jobtitle: "Regional partner, Malaysia"
 group: partner
 country: Malaysia
+permalink: /partner/lim-wei-jie/
 weight: 12
 ---
 

@@ -6,6 +6,7 @@ quote: "“Remittances taught us what borderless money can do.”"
 jobtitle: "Regional partner, Philippines"
 group: partner
 country: Philippines
+permalink: /partner/maria-santos/
 weight: 11
 ---
 

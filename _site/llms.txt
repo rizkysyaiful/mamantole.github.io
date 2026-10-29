@@ -31,11 +31,11 @@ Key facts:
 - [Ricky Saif](https://rizkysyaiful.github.io/team/ricky/): Corporate education
 - [Faizal Abdillah](https://rizkysyaiful.github.io/team/faizal/): Banking background
 - [Banitama](https://rizkysyaiful.github.io/team/banitama/): Software development
-- [Dimas](https://rizkysyaiful.github.io/team/dimas/): Regional partner, Indonesia (regional partner, Indonesia)
-- [Arjun Mehta](https://rizkysyaiful.github.io/team/arjun-mehta/): Regional partner, India (regional partner, India)
-- [Maria Santos](https://rizkysyaiful.github.io/team/maria-santos/): Regional partner, Philippines (regional partner, Philippines)
-- [Lim Wei Jie](https://rizkysyaiful.github.io/team/lim-wei-jie/): Regional partner, Malaysia (regional partner, Malaysia)
-- [Tan Mei Ling](https://rizkysyaiful.github.io/team/tan-mei-ling/): Regional partner, Singapore (regional partner, Singapore)
+- [Dimas](https://rizkysyaiful.github.io/partner/dimas/): Regional partner, Indonesia (regional partner, Indonesia)
+- [Arjun Mehta](https://rizkysyaiful.github.io/partner/arjun-mehta/): Regional partner, India (regional partner, India)
+- [Maria Santos](https://rizkysyaiful.github.io/partner/maria-santos/): Regional partner, Philippines (regional partner, Philippines)
+- [Lim Wei Jie](https://rizkysyaiful.github.io/partner/lim-wei-jie/): Regional partner, Malaysia (regional partner, Malaysia)
+- [Tan Mei Ling](https://rizkysyaiful.github.io/partner/tan-mei-ling/): Regional partner, Singapore (regional partner, Singapore)
 
 ## Guides
 

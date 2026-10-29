@@ -6,6 +6,7 @@ quote: "“Sound money is a long game. Preparation is the edge.”"
 jobtitle: "Regional partner, India"
 group: partner
 country: India
+permalink: /partner/arjun-mehta/
 weight: 10
 ---
 
