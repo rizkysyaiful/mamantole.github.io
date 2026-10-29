@@ -7,7 +7,6 @@ author: banitama
 reviewer: ricky
 related_guide: custody-options
 reading_time: 4
-last_modified_at: 2026-10-29
 thumbnail: "images/thumbs/gold-is-the-safer-hedge.png"
 thumbnail_alt: "A gold bar next to a Bitcoin coin"
 ---

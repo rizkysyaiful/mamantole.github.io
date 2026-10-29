@@ -7,7 +7,6 @@ author: faizal
 reviewer: banitama
 related_guide: accounting-and-audit
 reading_time: 5
-last_modified_at: 2026-10-29
 thumbnail: "images/thumbs/cannot-audit-or-account.png"
 thumbnail_alt: "A ledger book with a magnifying glass over it"
 ---

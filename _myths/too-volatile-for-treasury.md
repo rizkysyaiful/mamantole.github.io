@@ -7,7 +7,6 @@ author: faizal
 reviewer: banitama
 related_guide: treasury-policy
 reading_time: 4
-last_modified_at: 2026-10-29
 thumbnail: "images/thumbs/too-volatile-for-treasury.png"
 thumbnail_alt: "A wave line between a dashed ceiling and a solid floor"
 ---

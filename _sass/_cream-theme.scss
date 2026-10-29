@@ -118,7 +118,7 @@ body.page { background: $cream; color: $ink; line-height: 1.7; }
 .author-face { display: block; width: 64px; height: 64px; border-radius: 50%; object-fit: cover; background: $cream-deep; border: 1px solid $rule; }
 .author-meta { display: flex; flex-direction: column; gap: 2px; margin: 0; line-height: 1.4; }
 .author-name { font-weight: 600; }
-.author-role, .author-date { color: $muted-ink; font-size: .85em; }
+.author-role { color: $muted-ink; font-size: .85em; }
 .article-prose figure, .article-hero { margin: 34px 0; }
 .article-prose figure img, .article-prose figure svg, .article-hero img { display: block; width: 100%; height: auto; border: 1px solid $rule; border-radius: 4px; background: #fcf9f0; }
 .article-prose figcaption { margin-top: 10px; font-family: $font-family-heading; font-size: .78rem; line-height: 1.6; color: $muted-ink; }

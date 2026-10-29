@@ -2,7 +2,7 @@
 layout: default
 bodyClass: page-myth
 ---
-<header class="page-heading container col-narrow"><a class="eyebrow" href="{{ '/myths/' | relative_url }}">&larr; All myths</a><p class="post-meta">Myth {{ page.weight }} &middot; {{ page.reading_time }} min read</p><h1>{{ page.title }}</h1>{% include byline.html author=page.author reviewer=page.reviewer updated=page.last_modified_at %}</header>
+<header class="page-heading container col-narrow"><a class="eyebrow" href="{{ '/myths/' | relative_url }}">&larr; All myths</a><p class="post-meta">Myth {{ page.weight }} &middot; {{ page.reading_time }} min read</p><h1>{{ page.title }}</h1>{% include byline.html author=page.author reviewer=page.reviewer %}</header>
 {% include example-banner.html %}
 {% if page.thumbnail %}<figure class="article-hero"><img src="{{ page.thumbnail | relative_url }}" alt="{{ page.thumbnail_alt | default: page.title }}" width="1200" height="675"></figure>{% endif %}
 <div class="container col-narrow"><div class="answer-box"><span class="eyebrow">The short answer</span><p>{{ page.description }}</p></div></div>

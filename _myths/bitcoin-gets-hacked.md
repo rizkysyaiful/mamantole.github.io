@@ -7,7 +7,6 @@ author: banitama
 reviewer: ricky
 related_guide: custody-options
 reading_time: 4
-last_modified_at: 2026-10-29
 thumbnail: "images/thumbs/bitcoin-gets-hacked.png"
 thumbnail_alt: "A shield with a gold checkmark"
 ---

@@ -6,7 +6,6 @@ description: "Plan a 90-minute session that ends with next steps and named owner
 author: ricky
 reviewer: faizal
 reading_time: 6
-last_modified_at: 2026-10-29
 thumbnail: "images/thumbs/leadership-session.png"
 thumbnail_alt: "A presentation screen above three seated colleagues"
 ---

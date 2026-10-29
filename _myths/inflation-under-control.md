@@ -7,7 +7,6 @@ author: ricky
 reviewer: faizal
 related_guide: treasury-policy
 reading_time: 4
-last_modified_at: 2026-10-29
 thumbnail: "images/thumbs/inflation-under-control.png"
 thumbnail_alt: "Four coins shrinking in size from left to right, with an arrow pointing the same way"
 ---

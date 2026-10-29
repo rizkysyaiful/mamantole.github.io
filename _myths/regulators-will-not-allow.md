@@ -7,7 +7,6 @@ author: faizal
 reviewer: banitama
 related_guide: accounting-and-audit
 reading_time: 4
-last_modified_at: 2026-10-29
 thumbnail: "images/thumbs/regulators-will-not-allow.png"
 thumbnail_alt: "A classical building with columns and a pediment"
 ---

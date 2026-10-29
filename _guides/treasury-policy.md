@@ -6,7 +6,6 @@ description: "A one-page policy your board can read in five minutes: purpose, al
 author: faizal
 reviewer: ricky
 reading_time: 8
-last_modified_at: 2026-10-29
 thumbnail: "images/thumbs/treasury-policy.png"
 thumbnail_alt: "A policy document with a gold checkmark"
 ---

@@ -6,7 +6,6 @@ description: "Prepare the questions, risks and decision paper a board expects. F
 author: ricky
 reviewer: faizal
 reading_time: 7
-last_modified_at: 2026-10-29
 thumbnail: "images/thumbs/board-approval.png"
 thumbnail_alt: "A checklist with three gold checkmarks"
 ---

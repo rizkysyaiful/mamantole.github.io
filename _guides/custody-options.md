@@ -7,7 +7,6 @@ author: banitama
 reviewer: faizal
 
 reading_time: 8
-last_modified_at: 2026-10-29
 thumbnail: "images/thumbs/custody-options.png"
 thumbnail_alt: "A vault door with a gold dial"
 ---

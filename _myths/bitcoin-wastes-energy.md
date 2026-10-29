@@ -7,7 +7,6 @@ author: banitama
 reviewer: ricky
 related_guide: leadership-session
 reading_time: 4
-last_modified_at: 2026-10-29
 thumbnail: "images/thumbs/bitcoin-wastes-energy.png"
 thumbnail_alt: "A lightning bolt inside a circle"
 ---

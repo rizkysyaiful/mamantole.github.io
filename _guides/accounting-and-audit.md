@@ -6,7 +6,6 @@ description: "What your auditor will ask and what evidence to prepare: control, 
 author: faizal
 reviewer: banitama
 reading_time: 7
-last_modified_at: 2026-10-29
 thumbnail: "images/thumbs/accounting-and-audit.png"
 thumbnail_alt: "A calculator with a gold display"
 ---

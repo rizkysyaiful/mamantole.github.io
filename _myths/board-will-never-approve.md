@@ -7,7 +7,6 @@ author: ricky
 reviewer: faizal
 related_guide: board-approval
 reading_time: 4
-last_modified_at: 2026-10-29
 thumbnail: "images/thumbs/board-will-never-approve.png"
 thumbnail_alt: "A round boardroom table with six seats and a gold checkmark in the middle"
 ---

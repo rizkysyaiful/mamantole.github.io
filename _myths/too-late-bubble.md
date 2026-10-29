@@ -7,7 +7,6 @@ author: ricky
 reviewer: faizal
 related_guide: leadership-session
 reading_time: 4
-last_modified_at: 2026-10-29
 thumbnail: "images/thumbs/too-late-bubble.png"
 thumbnail_alt: "Illustration of two scales, one weighing a price tag and one weighing a long-term plan"
 ---
